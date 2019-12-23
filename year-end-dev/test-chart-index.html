@@ -1,42 +1,340 @@
-<html>
-  <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
-​
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'Total visitors'],
-          ['2010', 1693496],
-          ['2011', 1752237],
-          ['2012', 1562376],
-          ['2013', 1675428],
-          ['2014', 1745815],
-          ['2015', 1682590],
-          ['2016', 1880011],
-          ['2017', 1996172],
-          ['2018', 1823788],
-          ['2019', 2284986]
-        ]);
-​
-        var options = {
-            legend: { position: 'none' },
-            colors: ['tan'],
-            vAxis: { baseline: '1500000'}
-        };
-​
-        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
-​
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
-  </head>
-  <body>
-      <p style="margin-bottom: 5pt; line-height: 20px; font-family: sans-serif; font-size: 22px; color: gray">Utah skier visits</p>
-      <p style="margin-bottom: 15pt; line-height: 18px; max-width: 800px; font-family: sans-serif; font-size: 14px; color: darkgray">Skier visits grew by 35% at Utah's five ski areas operating on national forest. Last winter 2.3 million skied Alta, Snowbird, Brighton, Solitude and Snowbasin, thanks in part to the advent of multi-resort passes that are bringing more destination skiers to Utah resorts. Snowbasin accounted for much of the past decade's growth.This graph shows the total number of visitors at Alta, Brighton, Snowbasin, Snowbird, and Solitude resorts, 2000-2019.</p>
-    <div id="columnchart_material" style="max-width: 800px; max-height: 500px; width: 100%; height: 100%"></div>
-      <p style="margin-bottom: -3pt; font-family: sans-serif; font-size: 10px; color: gray">Source: Utah ski resorts</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <!--HEADER HERE-->
+<div class="flex-wrapper-center">
+   
+  <div class="major-heading-wrapper">
+      <h1 class="content-wrapper">How Utah has changed this decade — A booming economy and rising house prices</h1>
+  </div>
+
+</div>
+<!--100% WIDTH PHOTO HERE-->
+<!--MAIN ARTICLE PHOTO HERE-->
+<div class="flex-wrapper-center">
+<div class="container">
+  <div class="row">
+      <img class='img-responsive' src="https://arc-anglerfish-arc2-prod-sltrib.s3.amazonaws.com/public/7SNIGWBM4NCZNLMX65M3YGGR3E.jpg" alt="" />
+  </div>
+</div>
+</div>
+<!--ALL THIS CODE FOR THE PHOTO CREDIT-->
+
+<div class="flex-wrapper-center">
+  <figcaption>
+      <span class="caption credit helv-roman">
+       (Evan Vucci | AP) President Donald Trump speaks during a campaign rally at Kellogg Arena, Wednesday, Dec. 18, 2019, in Battle Creek, Mich.
+      </span>
+  </figcaption>
+</div>
+
+
+
+<div class="flex-wrapper-center">
+<div class="content-wrapper">
+  <p>The Salt Lake Tribune is examining the trends that have fundamentally changed the state in the 2010s. And it is hard to ignore the growth in the economy and its impact on wages, jobs and how and where we live. Here’s four major ways Utah has changed in the past 10 years:</p>
+  <h6>POPULATION</h6>
+  <h6>ENVIRONMENT</h6>
+  <h6>HOUSING</h6>
+  <h6>SOMETHING ELSE?</h6>
+</div>
+</div>
+
+
+
+
+<div class="flex-wrapper-center">
+<div class="container">
+  <div class="row">
+      <img class='img-responsive' src="https://arc-anglerfish-arc2-prod-sltrib.s3.amazonaws.com/public/6QQN4MHZGJEEXJWRWPCEVINKRE.jpg" alt="" />
+  </div>
+</div>
+</div>
+
+<div class="flex-wrapper-center">
+<figcaption>
+  <span class="caption credit helv-roman">
+   (Evan Vucci | AP) President Donald Trump speaks during a campaign rally at Kellogg Arena, Wednesday, Dec. 18, 2019, in Battle Creek, Mich.
+  </span>
+</figcaption>
+</div>
+
+
+<!--HERE IS THE SUB-HEADING-->
+<div class="flex-wrapper-center">
+<div class="major-heading-wrapper content-wrapper">
+  <h6>Utah’s economy roared, lifting wages too — eventually</h6>
+</div>
+</div>
+
+<!--MAIN CONTENT-->
+<div class="flex-wrapper-center">
+<div class="content-wrapper">
+  <p>The economic downturn from 2007 to 2009 hit Utah hard, but not as hard as it did many other states or the country as a whole. Similarly, the Beehive State rebounded more quickly, as remnants of the Great Recession gave way to an economic boom.</p>
+  <p>In the past decade, key measures such as jobs and the state’s gross domestic product — the total value of all goods and services produced — rose at record rates, repeatedly earning Utah’s economy national kudos. Many local businesses expanded and out-of-state companies discovered our well-educated workforce, relatively lower wages and opportunities for using outdoor recreation as a way to attract talented professionals.</p>
+  <p>Exports from Utah have grown steadily. With a robust pipeline of new entrepreneurs trained at Utah’s colleges and universities, a nurturing culture for startups has flourished in the state. Its tech sector centered on Silicon Slopes, with above-average salaries, has also grown dramatically, but so have the fields of retail trade, and professional, scientific and technical services.</p>
+  <p>By 2018 — the latest year for which there is hard data — median household incomes in the state had seen a nearly 18% jump from their 2010 levels. And judging from the years since 2016, the future trajectory is upward.</p>
+</div>
+</div>
+
+<div class="flex-wrapper-center">
+<div class="major-heading-wrapper content-wrapper">
+  <h6>Housing prices went up and up and up</h6>
+</div>
+</div>
+
+<div class="flex-wrapper-center">
+<div class="content-wrapper">
+  <p>Utah’s relatively rapid recovery from the Great Recession came with at least one downside. Nation-leading levels of economic growth and job creation since 2010, along with the state’s renowned home-grown population increases, created exceptional demand for housing — and pushed home prices skyward.</p>
+  <p>Costs for new and existing single-family homes grew over the decade at a yearly pace comparable to housing in cities such as San Francisco and San Jose. The median price of a home in Salt Lake County went up 73% in those 10 years, to at least $381,000, leading to similar rises in counties on and off the Wasatch Front.</p>
+  <p>Incomes grew, but failed to grow that quickly. At the same time, home construction since 2010 has lagged behind Utah’s torrid pace of making new families and households, leading to a gap of tens of thousands of available homes. The result: A housing affordability pinch with wide implications.</p>
+  <p>Home sales have slowed. Large numbers of households remain doubled up, with more than one family to a dwelling. Many would-be sellers find they can’t afford to buy a house in their own neighborhood today, much less move up. Homebuyers who can locate a bargain are often forced into longer commutes or other compromises.</p>
+  <p>Renters, too, are getting squeezed, particularly those at lower incomes and residents in vital blue-collar professions. Monthly rents continue to climb, even as the Wasatch Front sees historic levels of apartment construction. More Utahns are “cost burdened” today, meaning they pay half or more of their income for shelter, often putting them one financial crisis away from homelessness.</p>
+  <p>Together, these trends have brought new urgency to debates in city halls across Utah, especially over density. Business leaders warn of long-term effects to the state’s economy if the situation continues — and, as building costs continue to rise, it appears it will.</p>
+</div>
+</div>
+
+<div class="flex-wrapper-center">
+<div class="major-heading-wrapper content-wrapper">
+  <h6>Huge apartment complexes rise throughout the metro area </h6>
+</div>
+</div>
+
+<div class="flex-wrapper-center">
+<div class="content-wrapper">
+  <p>When it comes to housing in Utah, it was a decade for apartments.  Lots of apartments.</p>
+  <p>The Great Recession shattered old patterns of home ownership in many ways, as new realities of stagnant incomes, student debt and disillusionment over the nation’s foreclosure crisis during the prior decade took hold. Overlaying those trends, supplies of undeveloped land in or near Utah’s population centers are running out, squeezing developers to build more dense housing on the plots that are available.</p>
+  <p>Cities across the state approved building permits for a total of 44,444 new apartments over the past 10 years, more than double the number built in the decade prior. All but a tiny share of those new units were in larger apartment complexes with five dwellings or above.</p>
+  <p>Numbers for single-family homes — long the mainstay of housing in Utah — were still far larger, with more than 93,229 approved over the past decade. But where those more traditional homes made up 75% of all dwellings built in Utah in 2000, they account for less than 44% of the total today.</p>
+  <p>Along the Wasatch Front, new zoning has increasingly steered these residential complexes to locate along new transit lines, changing the look of neighborhoods and business corridors in many cities forever.</p>
+</div>
+</div>
+
+<div class="flex-wrapper-center">
+<div class="major-heading-wrapper content-wrapper">
+  <h6>The tech sector becomes a powerhouse, attracting jobs and billion dollar deals</h6>
+</div>
+</div>
+
+<div class="flex-wrapper-center">
+<div class="content-wrapper">
+  <p>Utah’s technology industry reached a critical mass over the decade, as the sector saw several billion-dollar IPOs and acquisitions, the number of tech firms in the state surpassed 6,700 and employment grew dramatically.</p>
+  <p>Moreover, the notion of Silicon Slopes — the cluster of Utah tech companies centered along the Interstate 15 corridor between Salt Lake and Utah counties — went from an emerging ecosystem of companies and startups in 2010 to a well-rounded sector with a worldwide reputation.</p>
+  <p>That progression can be mapped in big deals. Ten years ago, software giant Adobe bought Lehi-based Omniture for $1.8 billion, in what many saw as the start of a new era in tech for Utah. Fast forward to 2018, which saw successful stock offerings by Utah companies Pluralsight and Domo — only to be capped that September by the $8 billion acquisition of customer-survey software firm Qualtrics in Provo by SAP, a German multinational powerhouse in cloud and business services. Those data points alone, several leaders in the industry say, speak to the sector’s global presence.</p>
+  <p>But the upward cycle of Silicon Slopes can also be measured in the sheer number of jobs it generates. A study issued in 2019 found the sector’s total economic impact in Utah had reached $29.7 billion. One in seven of all jobs in the state are now tied to the sector, accounting for more than 16% of all worker earnings and generating more than $2.5 billion in state and local taxes.</p>
+</div>
+</div>
+
+
+<!--START A NEW MAJOR SECTION HERE-->
+
+<div class="flex-wrapper-center">
+<div class="content-wrapper">
+  <p>HERE IS WHERE YOU COPY ALL THE TEXT FROM COMPOSER SECTION 2</p>
+</div>
+</div>
+
+<div class="flex-wrapper-center">
+<div class="content-wrapper">
+  <p>HERE IS WHERE YOU COPY ALL THE TEXT FROM COMPOSER SECTION 3</p>
+</div>
+</div>
+
+<div class="flex-wrapper-center">
+<div class="content-wrapper">
+  <p>HERE IS WHERE YOU COPY ALL THE TEXT FROM COMPOSER SECTION 4</p>
+</div>
+</div>
+
+
+
+<!--THIS IS THE CHLAMADIA CHART-->
+<div class="flex-wrapper-center">
+<div class="graphics-wrapper">
+  <div class="chart-wrapper" style="width: 100%;">
+      <p style="margin-bottom: 5pt; line-height: 20px; font-family: sans-serif; font-size: 22px; color: gray">Chlamydia rates</p>
+      <p style="margin-bottom: 15pt; line-height: 18px; max-width: 800px; font-family: sans-serif; font-size: 14px; color: darkgray">The sexually transmitted infection chlamydia has become the top reported disease in Utah in recent years. This graph shows chlamydia cases per 100,000 population, 2010-2018.</p>
+      <div id="chlamydia" style="max-width: 800px; max-height: 500px; width: 100%; height: 100%"></div>
+      <p style="margin-bottom: -3pt; font-family: sans-serif; font-size: 10px; color: gray">Source: The Utah Department of Health</p>
       <p style="font-family: sans-serif; font-size: 10px; color: darkgray">Graphic by Christopher Cherrington | The Salt Lake Tribune</p>
-  </body>
-</html> 
+  </div>
+</div>
+</div>
+
+<!--THIS IS THE NO INSURANCE CHART-->
+<div class="flex-wrapper-center">
+<div class="graphics-wrapper">
+  <div class="chart-wrapper" style="width: 100%;">
+      <p style="margin-bottom: 5pt; line-height: 20px; font-family: sans-serif; font-size: 22px; color: gray">Utahns without health insurance</p>
+      <p style="margin-bottom: 15pt; line-height: 18px; max-width: 800px; font-family: sans-serif; font-size: 14px; color: darkgray">A Census Bureau survey shows a decline in the number of Utahns who don't have health insurance. This graph shows the crude percentage of persons in Utah with no health insurance coverage, 2000-2017.</p>
+      <div id="insurance" style="max-width: 800px; max-height: 500px; width: 100%; height: 100%"></div>
+      <p style="margin-bottom: -3pt; font-family: sans-serif; font-size: 10px; color: gray">Source: The Utah Department of Health</p>
+      <p style="font-family: sans-serif; font-size: 10px; color: darkgray">Graphic by Christopher Cherrington | The Salt Lake Tribune</p>
+  </div>
+</div>
+</div>
+
+<!--THE SUICIDE-->
+<div class="flex-wrapper-center">
+<div class="graphics-wrapper" >
+  <div class="chart-wrapper" style="width: 100%;">
+      <p style="margin-bottom: 5pt; line-height: 20px; font-family: sans-serif; font-size: 22px; color: gray">Utah suicide rates</p>
+      <p style="margin-bottom: 15pt; line-height: 18px; max-width: 800px; font-family: sans-serif; font-size: 14px; color: darkgray">The number of Utahns who died by suicide has increased every year through the last decade. This graph shows suicide deaths per 100,000 population, 2010-2018.</p>
+      <div id="suicide" style="max-width: 800px; max-height: 500px; width: 100%; height: 100%"></div>
+      <p style="margin-bottom: -3pt; font-family: sans-serif; font-size: 10px; color: gray">Source: The Utah Department of Health</p>
+      <p style="font-family: sans-serif; font-size: 10px; color: darkgray">Graphic by Christopher Cherrington | The Salt Lake Tribune</p>  
+  </div>
+</div>
+</div>
+
+
+
+<div class="container">
+<div class="row">
+ <img class='img-responsive' src="https://arc-anglerfish-arc2-prod-sltrib.s3.amazonaws.com/public/3IMEWRBYIZDFDOZF5P7FNYVKEM.jpg" alt="" />
+</div>
+</div>
+<div class="col-xs-12 med-lg-no-gutters no-padding">
+<figcaption>
+  <span class="caption credit helv-roman">
+   (Evan Vucci | AP) President Donald Trump speaks during a campaign rally at Kellogg Arena, Wednesday, Dec. 18, 2019, in Battle Creek, Mich.
+  </span>
+</figcaption>
+</div>
+
+
+<div class="container">
+<div class="row">
+ <img class='img-responsive' src="https://arc-anglerfish-arc2-prod-sltrib.s3.amazonaws.com/public/66LOD4CZS5GMDBB5OOC73L3RFM.JPG" alt="" />
+</div>
+</div>
+<div class="col-xs-12 med-lg-no-gutters no-padding">
+<figcaption>
+  <span class="caption credit helv-roman">
+   (Evan Vucci | AP) President Donald Trump speaks during a campaign rally at Kellogg Arena, Wednesday, Dec. 18, 2019, in Battle Creek, Mich.
+  </span>
+</figcaption>
+</div>
+
+
+
+
+<!-- GOOGLE CHARTS JAVASCRIPT -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+//GIVE EACH CHART A UNIQUE ID WHERE CHART WILL BE DRAWN
+
+// LOAD CHARTS AND THE CORECHART PACKAGE - DO ONCE
+
+google.charts.load('current', {'packages':['bar']});
+
+// HERE CREATE ONE CALLBACK FUNCTION FOR EACH OF THE CHARTS 
+//HERE IS THE CALL FOR THE CHLAMYDIA CHART
+google.charts.setOnLoadCallback(drawChlamydia);
+//   google.charts.setOnLoadCallback(noInsurance);
+
+//NOW DEFINE EACH OF THESE FUNCTIONS - EACH CHART HAS IT'S OWN FUNCTION NAME THAT WILL BE CALLED
+//HERE IS THE drawChlamydia function LOL
+function drawChlamydia() {
+var data = google.visualization.arrayToDataTable([
+['Year', 'Cases per 100,000 population'],
+['2010', 240.5],
+['2011', 250.7],
+['2012', 266.6],
+['2013', 258.8],
+['2014', 279.7],
+['2015', 288.7],
+['2016', 310.9],
+['2017', 326.6],
+['2018', 333.5],
+]);
+var options = {
+  chartArea: {width: '100%'},
+  legend: { position: 'none' },
+  colors: ['tan'],
+  vAxis: { baseline: '200'}
+};
+var chart = new google.charts.Bar(document.getElementById('chlamydia'));
+chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+
+$(window).resize(function(){
+drawChlamydia();
+});
+</script>
+
+<!--HEALTH INSURANCE GRAPH SCRIPT-->
+<script type="text/javascript">
+google.charts.load('current', {'packages':['bar']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+  ['Year', 'Percentage with no health insurance'],
+  ['2010', .146],
+  ['2011', .147],
+  ['2012', .139],
+  ['2013', .134],
+  ['2014', .12],
+  ['2015', .10],
+  ['2016', .084],
+  ['2017', .088],
+]);
+
+var options = {
+    legend: { position: 'none' },
+    colors: ['tan'],
+    vAxis: { format: '#.#%'},
+};
+
+var chart = new google.charts.Bar(document.getElementById('insurance'));
+
+chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+$(window).resize(function(){
+drawChart();
+});
+</script>
+
+<!--SUICIDE GRAPH SCRIPT-->
+<script type="text/javascript">
+google.charts.load('current', {'packages':['bar']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+  ['Year', 'Suicide deaths per 100,000 population'],
+  ['2010', 20.6],
+  ['2011', 21.3],
+  ['2012', 23.3],
+  ['2013', 23.9],
+  ['2014', 22.9],
+  ['2015', 24.5],
+  ['2016', 24.2],
+  ['2017', 25.6],
+  ['2018', 25.1],
+]);
+
+var options = {
+    legend: { position: 'none' },
+    colors: ['tan'],
+    vAxis: { baseline: '20'}
+};
+
+var chart = new google.charts.Bar(document.getElementById('suicide'));
+
+chart.draw(data, google.charts.Bar.convertOptions(options));
+}
+$(window).resize(function(){
+drawChart();
+});
+</script>
+</body>
+</html>

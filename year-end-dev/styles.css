@@ -1,19 +1,104 @@
-.image-wrapper img {
+
+.content-wrapper {
+    padding: 20px;
+    max-width: 1000px;
+}
+
+.chart-wrapper {
+    padding: 20px;
+    margin-20px;
+}
+
+.flex-wrapper-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.backdrop-container .photo-wrapper {
+    /* position: relative; */
+    width: 100%;
+    margin: auto 0;
+    display: block;
+}
+
+.backdrop-container .backdrop-text {
+    font-size: 2.5em;
+    color: white;
+    display: block;
+    /* position: absolute; */
+    top: 50%;
+    left: 25%;
+    -webkit-transform: translate(-25%, -50%);
+    -ms-transform: translate(-25%, -50%);
+    transform: translate(-25%, -50%);
+    width: 100%
+}
+
+.backdrop-container .no-image {
+    background-color: #2d4977
+}
+
+.backdrop-container .sub-text {
+    font-size: 0.5em
+}
+
+@media (max-width: 767px) {
+    .backdrop-container .sub-text {
+        font-size: 0.75em
+    }
+}
+
+.backdrop-container img {
+    /* max-width: 100%; */
+    /* max-height: 100%; */
+    width: 100%;
+    /* -o-object-fit: cover;
+    object-fit: cover */
+}
+
+@media (max-width: 991px) {
+    .backdrop-container .backdrop-text {
+        font-size: 2em
+    }
+    .backdrop-container .photo-wrapper {
+        height: 25vh
+    }
+}
+
+@media (max-width: 767px) {
+    .backdrop-container .backdrop-text {
+        font-size: unset
+    }
+    .backdrop-container .photo-wrapper:not(.no-image) {
+        height: unset
+    }
+}
+
+.bold {
+    font-weight: bold
+}
+
+
+
+/*sort of like a v1*/
+/* .image-wrapper img {
     max-width: 100%!important;
-    /* margin: -50px; */
+    /* margin: -50px; 
     margin: auto 0!important;
     padding: auto 0!important;
-    /* padding-left: -50px!important; */
+    /* padding-left: -50px!important; 
 }
 .no-margin img {
     max-width: 100%!important;
     height: auto;
-    /* margin: -30px; */
+    /* margin: -30px; 
     margin: auto 0!important;
     padding: auto 0!important;
     background-size: cover;
-    /* padding-left: -50px!important; */
+    /* padding-left: -50px!important; 
 }
 .chart-wrapper {
     width: 100%;
-}
+} */
