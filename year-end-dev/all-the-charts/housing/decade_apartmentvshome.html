@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Single-family homes', 'Apts, duplexes, & town homes'],
+          ['2010', 5947, 3132],
+          ['2011', 5389, 3696],
+          ['2012', 7655, 4264],
+          ['2013', 9857, 5152],
+          ['2014', 8712, 10098],
+          ['2015', 9933, 7361],
+          ['2016', 10668, 9396],
+          ['2017', 12113, 10889],
+          ['2018', 12766, 11479],
+          ['2019', 10189, 13062]
+        ]);
+
+        var options = {
+            legend: { position: 'none' },
+            colors: ['tan', '#bc9055']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('apartments'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  <body>
+      <p style="margin-bottom: 5pt; line-height: 20px; font-family: sans-serif; font-size: 22px; color: gray">Apartment vs single-family home construction</p>
+      <p style="margin-bottom: 15pt; line-height: 18px; max-width: 800px; font-family: sans-serif; font-size: 14px; color: darkgray">Apartments, duplexes, town homes and other types of housing made up a larger share of all homes built in Utah in 2019, breaking a trend from previous years.</p>
+    <div id="apartments" style="max-width: 800px; max-height: 500px; width: 100%; height: 100%"></div>
+      <p style="margin-bottom: -3pt; font-family: sans-serif; font-size: 10px; color: gray">Source: Ivory-Boyer Construction Database</p>
+      <p style="font-family: sans-serif; font-size: 10px; color: darkgray">Graphic by Christopher Cherrington | The Salt Lake Tribune</p>
+  </body>
+</html> 

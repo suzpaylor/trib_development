@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+​
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Total visitors'],
+          ['2010', 1693496],
+          ['2011', 1752237],
+          ['2012', 1562376],
+          ['2013', 1675428],
+          ['2014', 1745815],
+          ['2015', 1682590],
+          ['2016', 1880011],
+          ['2017', 1996172],
+          ['2018', 1823788],
+          ['2019', 2284986]
+        ]);
+​
+        var options = {
+            legend: { position: 'none' },
+            colors: ['tan'],
+            vAxis: { baseline: '1500000'}
+        };
+​
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+​
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  <body>
+      <p style="margin-bottom: 5pt; line-height: 20px; font-family: sans-serif; font-size: 22px; color: gray">Utah skier visits</p>
+      <p style="margin-bottom: 15pt; line-height: 18px; max-width: 800px; font-family: sans-serif; font-size: 14px; color: darkgray">Skier visits grew by 35% at Utah's five ski areas operating on national forest. Last winter 2.3 million skied Alta, Snowbird, Brighton, Solitude and Snowbasin, thanks in part to the advent of multi-resort passes that are bringing more destination skiers to Utah resorts. Snowbasin accounted for much of the past decade's growth.This graph shows the total number of visitors at Alta, Brighton, Snowbasin, Snowbird, and Solitude resorts, 2000-2019.</p>
+    <div id="columnchart_material" style="max-width: 800px; max-height: 500px; width: 100%; height: 100%"></div>
+      <p style="margin-bottom: -3pt; font-family: sans-serif; font-size: 10px; color: gray">Source: Utah ski resorts</p>
+      <p style="font-family: sans-serif; font-size: 10px; color: darkgray">Graphic by Christopher Cherrington | The Salt Lake Tribune</p>
+  </body>
+</html> 
