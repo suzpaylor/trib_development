@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -11,9 +12,16 @@
     <title>Document</title>
 </head>
 <div class="container">
+       <img class='img-responsive' style="width: 100%; background-size: cover; position:absolute; display: block;" src="https://arc-anglerfish-arc2-prod-sltrib.s3.amazonaws.com/public/RS7Y2WVOJRHIZI3FXNRYLABKMA.jpg" alt="" />
+    
+  </div>
+<div class="container">
 <div class="h1">
     Main Heading Year End
 </div>
+
+
+
 <div class="image-wrapper lazy-wrapper photo-wrapper">
     <img src="https://arc-anglerfish-arc2-prod-sltrib.s3.amazonaws.com/public/7SNIGWBM4NCZNLMX65M3YGGR3E.jpg" alt="photo of salt lake city" class="no-margin">
     </div>
@@ -107,7 +115,11 @@
     
     <p>You have freedom here. The only guide is your heart. Any little thing can be your friend if you let it be. Pretend you're water. Just floating without any effort. Having a good day. This is your world. Even trees need a friend. We all need friends. Now we can begin working on lots of happy little things. Now we'll take the almighty fan brush. If you don't think every day is a good day - try missing a few. You'll see.</p>
     
-    
+    <div class="mobile-sharebar hidden-md hidden-lg">
+        <jsp:include page="../../../features/utilities/sltrib-sharebar/feature.jsp" >
+            <jsp:param name="isCommentsPage" value="true" />
+        </jsp:include>
+    </div>
     
     </div>
 </div>
@@ -144,5 +156,8 @@
       drawChart();
     });
     </script>
+
+
+
 </body>
 </html>
