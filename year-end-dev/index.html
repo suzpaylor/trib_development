@@ -877,5 +877,35 @@ function drawChart() {
   chart.draw(data, google.charts.Bar.convertOptions(options));
 }
 </script>
+  <!--LESS BABIES SCRIPT/DATA-->
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['bar']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Year', 'Utah fertility rate', 'United States fertility rate'],
+        ['2010', 2.45, 1.93],
+        ['2011', 2.38, 1.89],
+        ['2012', 2.37, 1.88],
+        ['2013', 2.34, 1.86],
+        ['2014', 2.33, 1.86],
+        ['2015', 2.29, 1.84],
+        ['2016', 2.24, 1.82],
+        ['2017', 2.12, 1.77],
+        ['2018', 2.03, 1.73]
+      ]);
+
+      var options = {
+          legend: { position: 'none'},
+          colors: ['tan', 'wheat'],
+          vAxis: { baseline: '1.6'}
+      };
+
+      var chart = new google.charts.Bar(document.getElementById('fertility'));
+
+      chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
+  </script>
 </body>
 </html>
