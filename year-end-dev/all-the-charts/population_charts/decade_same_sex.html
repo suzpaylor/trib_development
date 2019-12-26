@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Same-sex couples'],
+          ['2010', 3937],
+          ['2011', 4914],
+          ['2012', 3501],
+          ['2013', 5331],
+          ['2014', 5099],
+          ['2015', 5856],
+          ['2016', 5979],
+          ['2017', 8750],
+          ['2018', 6017]
+        ]);
+
+        var options = {
+            legend: { position: 'none' },
+            colors: ['tan']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('sameSex'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  <body>
+      <p style="margin-bottom: 5pt; line-height: 20px; font-family: sans-serif; font-size: 22px; color: gray">Same-sex couples in Utah</p>
+      <p style="margin-bottom: 15pt; line-height: 18px; max-width: 800px; font-family: sans-serif; font-size: 14px; color: darkgray">This graph shows the number of same-sex couples in Utah, 2010-2018.</p>
+    <div id="sameSex" style="max-width: 800px; max-height: 500px; width: 100%; height: 100%"></div>
+      <p style="margin-bottom: -3pt; font-family: sans-serif; font-size: 10px; color: gray">Source: U.S. Census Bureau</p>
+      <p style="font-family: sans-serif; font-size: 10px; color: darkgray">Graphic by Christopher Cherrington | The Salt Lake Tribune</p>
+  </body>
+</html>
