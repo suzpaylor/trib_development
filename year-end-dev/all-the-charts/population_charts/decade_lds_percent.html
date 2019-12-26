@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Percent LDS in Utah'],
+          ['2010', .5144],
+          ['2011', .5139],
+          ['2012', .5128],
+          ['2013', .5199],
+          ['2014', .5177],
+          ['2015', .5132],
+          ['2016', .5063],
+          ['2017', .4993],
+          ['2018', .4891],
+          ['2019', .4787],
+        ]);
+
+        var options = {
+            legend: { position: 'none' },
+            colors: ['tan'],
+            vAxis: { format: '#.#%' , baseline: '.4600'},
+            
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('ldsPercent'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  <body>
+      <p style="margin-bottom: 5pt; line-height: 20px; font-family: sans-serif; font-size: 22px; color: gray">Salt Lake County's declining Latter-day Saint population</p>
+      <p style="margin-bottom: 15pt; line-height: 18px; max-width: 800px; font-family: sans-serif; font-size: 14px; color: darkgray">This decade, Salt Lake County became minority-Latter-day Saint, a huge shift as the state's population continues to diversify.</p>
+      <div id="ldsPercent" style="max-width: 800px; max-height: 500px; width: 100%; height: 100%"></div>
+      <p style="margin-bottom: -3pt; font-family: sans-serif; font-size: 10px; color: gray">Source: The Church of Jesus Christ of Latter-day Saints</p>
+      <p style="font-family: sans-serif; font-size: 10px; color: darkgray">Graphic by Christopher Cherrington | The Salt Lake Tribune</p>
+  </body>
+</html> 
