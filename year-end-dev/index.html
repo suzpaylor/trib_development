@@ -1050,10 +1050,6 @@
     var chart = new google.charts.Bar(document.getElementById('chlamydia'));
     chart.draw(data, google.charts.Bar.convertOptions(options));
   }
-
-  $(window).resize(function(){
-  drawChlamydia();
-});
 </script>
 
 <!--HEALTH INSURANCE GRAPH SCRIPT-->
@@ -1084,9 +1080,6 @@
 
       chart.draw(data, google.charts.Bar.convertOptions(options));
     }
-    $(window).resize(function(){
-    drawChart();
-    });
   </script>
 
 <!--SUICIDE GRAPH SCRIPT-->
@@ -1118,12 +1111,7 @@
 
       chart.draw(data, google.charts.Bar.convertOptions(options));
     }
-    $(window).resize(function(){
-    drawChart();
-    });
   </script>
-
-
   <!--CHART FOR INCOME PRICES HERE-->
   <script type="text/javascript">
     google.charts.load('current', {'packages':['bar']});
@@ -1153,9 +1141,6 @@
 
       chart.draw(data, google.charts.Bar.convertOptions(options));
     }
-    $(window).resize(function(){
-    drawChart();
-    });
   </script>
 
   <!--HOUSING PRICE DATA HERE-->
@@ -1187,11 +1172,7 @@
       var chart = new google.charts.Bar(document.getElementById('housingPrice'));
 
       chart.draw(data, google.charts.Bar.convertOptions(options));
-    }
-
-    $(window).resize(function(){
-    drawChart();
-    });  
+    } 
   </script>
 
   <!--APARTMENT DATA SCRIPT-->
@@ -1223,9 +1204,6 @@
 
       chart.draw(data, google.charts.Bar.convertOptions(options));
     }
-    $(window).resize(function(){
-    drawChart();
-    });
   </script>
 
   <!--VAPE DATA HERE-->
@@ -1253,9 +1231,6 @@
 
       chart.draw(data, google.charts.Bar.convertOptions(options));
     }
-    $(window).resize(function(){
-    drawChart();
-    });
   </script>
   <!--SUICIDE SCRIPT/DATA HERE-->
 <script type="text/javascript">
@@ -1286,9 +1261,6 @@
 
       chart.draw(data, google.charts.Bar.convertOptions(options));
     }
-    $(window).resize(function(){
-    drawChart();
-    });
   </script>
   <!--METH SCRIPT/DATA HERE-->
   <script type="text/javascript">
@@ -1318,9 +1290,6 @@
 
       chart.draw(data, google.charts.Bar.convertOptions(options));
     }
-    $(window).resize(function(){
-    drawChart();
-    });
   </script>
 
   <!--SCRIPT/DATA FOR HEALTH INSURANCE-->
@@ -1348,8 +1317,6 @@
       };
 
       var chart = new google.charts.Bar(document.getElementById('insurance'));
-
-      chart.draw(data, google.charts.Bar.convertOptions(options));
     }
   </script>
   <!--LESS BABIES SCRIPT/DATA-->
@@ -1382,6 +1349,7 @@
       chart.draw(data, google.charts.Bar.convertOptions(options));
     }
   </script>
+  <!--TOTAL POPULATION SCRIPT/DATA-->
   <script type="text/javascript">
     google.charts.load('current', {'packages':['bar']});
     google.charts.setOnLoadCallback(drawChart);
@@ -1413,7 +1381,6 @@
     }
   </script>
   <!--GAY MARRIAGE DATA/SCRIPT HERE-->
-  <!--POPULATION DATA/SCRIPT HERE-->
   <!--MINORITIES DATA/CHART HERE-->
   <script type="text/javascript">
     google.charts.load('current', {'packages':['bar']});
@@ -1496,7 +1463,7 @@
       var options = {
           legend: { position: 'none' },
           colors: ['tan'],
-          vAxis: { baseline: '1500000'}
+          vAxis: { baseline: '1400000'}
       };
 
       var chart = new google.charts.Bar(document.getElementById('skiers'));
@@ -1512,6 +1479,7 @@
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
         ['Year', 'Total visitors'],
+        ['2009', 4822847],
         ['2010', 4788056],
         ['2011', 4811581],
         ['2012', 4803770],
@@ -1562,7 +1530,154 @@
 
       chart.draw(data, google.charts.Bar.convertOptions(options));
     }
+    </script>
+    <!--SAME-SEX MARRIAGE & DATA-->
+        <script type="text/javascript">
+            google.charts.load('current', {'packages':['bar']});
+            google.charts.setOnLoadCallback(drawChart);
+      
+            function drawChart() {
+              var data = google.visualization.arrayToDataTable([
+                ['Year', 'Same-sex couples'],
+                ['2010', 3937],
+                ['2011', 4914],
+                ['2012', 3501],
+                ['2013', 5331],
+                ['2014', 5099],
+                ['2015', 5856],
+                ['2016', 5979],
+                ['2017', 8750],
+                ['2018', 6017]
+              ]);
+      
+              var options = {
+                  legend: { position: 'none' },
+                  colors: ['tan']
+              };
+      
+              var chart = new google.charts.Bar(document.getElementById('sameSex'));
+      
+              chart.draw(data, google.charts.Bar.convertOptions(options));
+    }   
+    </script>
+<!--LDS PERCENT DATA-->
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['bar']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Year', 'Percent LDS in Salt Lake County'],
+        ['2010', .5144],
+        ['2011', .5139],
+        ['2012', .5128],
+        ['2013', .5199],
+        ['2014', .5177],
+        ['2015', .5132],
+        ['2016', .5063],
+        ['2017', .4993],
+        ['2018', .4891],
+        ['2019', .4787],
+      ]);
+
+      var options = {
+          legend: { position: 'none' },
+          colors: ['tan'],
+          vAxis: { format: '#.#%' , baseline: '.4600'},
+          
+      };
+
+      var chart = new google.charts.Bar(document.getElementById('ldsPercent'));
+
+      chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
   </script>
+  <!--COAL CHART DATA/SCRIPT-->
+      <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart);
+  
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Year', 'Coal production in tons'],
+            ['2009', 21900000],
+            ['2010', 19400000],
+            ['2011', 20100000],
+            ['2012', 17200000],
+            ['2013', 17000000],
+            ['2014', 17900000],
+            ['2015', 14500000],
+            ['2016', 14000000],
+            ['2017', 14500000],
+            ['2018', 13800000]
+          ]);
+  
+          var options = {
+              legend: { position: 'none' },
+              colors: ['tan']
+          };
+  
+          var chart = new google.charts.Bar(document.getElementById('coalProduction'));
+  
+          chart.draw(data, google.charts.Bar.convertOptions(options)); 
+    }   
+      </script>
+<!--UTAH COUNTY CHART-->
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['bar']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Year', 'Utah county population'],
+        ['2010', 518872],
+        ['2011', 532753],
+        ['2012', 544892],
+        ['2013', 554405],
+        ['2014', 567218],
+        ['2015', 585719],
+        ['2016', 603385],
+        ['2017', 617735],
+        ['2018', 633582],
+        ['2019', 651409]
+      ]);
+
+      var options = {
+          legend: { position: 'none' },
+          colors: ['tan'],
+          vAxis: { baseline: '500000'}
+      };
+
+      var chart = new google.charts.Bar(document.getElementById('utahCounty'));
+
+      chart.draw(data, google.charts.Bar.convertOptions(options));
+    }   
+  </script>
+  <!--AIR QUALITY CHART-->
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['bar']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Year', 'Emissions in tons'],
+        ['2011', 410],
+        ['2014', 345],
+        ['2016', 310],
+        ['2019', 285]
+      ]);
+
+      var options = {
+          legend: { position: 'none' },
+          colors: ['tan']
+      };
+
+      var chart = new google.charts.Bar(document.getElementById('airQuality'));
+
+      chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
+  </script>
+  <!--END SCRIPTS-->
   <!--THIS SHOULD ALL BE UP TO DATE-->
   <!--TODo TEST ON BROWSERS-->
   <!--RESEARCH BEST WAYS TO TEST ALL THIS-->
