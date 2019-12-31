@@ -1,0 +1,142 @@
+#container {
+	width: 90%;
+	max-width: 1200px;
+	background: #FFFFFF;
+	margin: auto; /* the auto margins (in conjunction with a width) center the page */
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+#mainContent {
+	padding: 10px 20px;
+	background: #FFFFFF;
+}
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	margin-bottom: 20px;
+}
+
+.pdf-box {
+	width: 100%;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	/* border: 5px solid purple; */
+}
+/* .pdf-box {
+	width:30%;
+	max-width:220px;
+	float:right;
+	margin:10px;
+} */
+
+.download {
+	text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+    .download {
+        font-size: .8em;
+    }
+} 
+
+
+
+.pdf-box img {
+	width:100%;
+	border:none;
+	padding: 20px;
+	max-width: 600px;
+}
+
+.links {
+    color: #326891;
+    transition: color 0.5s ease-in-out!;
+}
+
+.links:hover {
+    color: #76818a;
+}
+
+.list-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: space-around;
+	height: 100%;
+	flex-wrap: wrap;
+	padding: 20px;
+	align-self: center;
+	/* border: 5px solid black; */
+}
+
+/* .pdf-wrapper {
+	align-content: center;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+} */
+
+
+.list-text {
+	font-size: 1.1em;
+	text-align: left;
+}
+
+@media only screen and (max-width: 480px) {
+    .list-text {
+        font-size: .9em;
+    }
+} 
+
+.row-details {
+	max-width: 1200px;
+	/* border: 5px solid blue; */
+	display: flex;
+	align-content: center;
+	flex-wrap: wrap;
+}
+
+.items-box {
+	display: flex;
+	justify-content: space-around;
+	/* border: 5px solid pink; */
+}
+
+.list-pdf {
+	/* border: 5px solid red; */
+	display: flex;
+	align-content: space-around;
+}
+
+.pdf-wrapper {
+	/* border: 5px solid orange; */
+	width: 100%;
+	display: flex;
+	align-content: space-around;
+	align-items: center;
+}
+
+/* @media only screen and (max-width: 760px) {
+    .pdf-wrapper {
+        align-content: center!important;
+    }
+}  */
+
+
+.pdf-column {
+	display: flex;;
+}
+
+.pdf-box {
+	/* border: 5px solid grey; */
+}
