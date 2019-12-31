@@ -1,0 +1,58 @@
+/* html {
+    box-sizing: border-box;
+  }
+   */
+  /* *, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  } */
+  
+ .home-icon {
+     color: #FFF;
+ }
+  
+  nav {
+    width: 100%;
+    background: linear-gradient(135deg,#77787B 0,#B1B3B6 100%)
+  }
+
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  /* .logo {
+    display: inline-block;
+  }
+   */
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-item a {
+    /* display: inline-block; */
+    text-decoration: none;
+    color: white;
+  }
+  .ul-wrapper {
+      align-items: center;
+  }
+  
+  .donate-button {
+    
+  }
+  /* .nav-item:hover {
+    background-color: white;
+  }
+  
+  .nav-item:hover a {
+    color: darkgreen;
+  } */
+  
+  /* .logo img {
+    width: 175px;
+    vertical-align: middle;
+  } */

@@ -1,0 +1,431 @@
+<?
+<!--CODE BLOCK BELOW WON"T BE NECESSARY WITH JUST ARCHIVES SEARCH-->  
+<!-- switch ($_REQUEST['searchtab']) {
+		case "recent":
+		default:
+			$tab = "recent";
+			break;
+		case "archive":
+			$tab = "archive";
+			break;
+		case "web":
+			$tab = "web";
+			break;
+	} -->
+<?
+  $detailpath = "https://". $_SERVER['SERVER_NAME']."/article.php";
+	$searchlimit = 500;
+	$keyword = $_GET['keyword'];
+	$displayKeyword= $keyword;
+	$urlKeyword = urlencode($keyword);
+	$keyword = str_replace("'", "&apos;", $keyword);
+	$qtype = $_GET['qtype'];
+	$year =$_GET['year'];
+	$thisyear= date('Y');
+	$anyCheck=" checked";
+	$allCheck=" ";
+	$exactCheck=" ";
+	$sdate= $_GET['sdate'];
+		if (strlen($sdate)==0){
+			$sdate = date("Y-m-d", strtotime("-1 month"));
+		}else{
+			$sdate= date("Y-m-d", strtotime($sdate));
+		};
+
+	$edate=$_GET['edate'];
+		if (strlen($edate)==0){
+			$edate = date("Y-m-d");
+		}else{
+			$edate= date("Y-m-d", strtotime($edate));
+		};
+	
+	
+//	if (strlen($keyword)==0) {
+//		$keyword= "Enter a search phrase";			
+//	};
+	
+	if ($qtype == "all"){
+		$keyword = str_replace(" ", " +", $keyword);
+		$keyword = "+".$keyword;
+		$allCheck= " checked";
+		$anyCheck= " ";
+		
+	};
+	if ($qtype == "exact"){
+		$keyword = "\"".$keyword."\"";
+		$exactCheck= " checked";
+		$anyCheck= " ";
+	};
+	
+	if($_REQUEST['sort']) {
+		$sort = $_REQUEST['sort'];
+	} else {
+		$sort = 'r';	
+	}
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://kit.fontawesome.com/c3d2a85752.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+    
+    <nav class="navbar">
+        <a href="https://www.sltrib.com/" class="logo">
+          <!-- <img src="https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg" alt="freeCodeCamp logo"> -->
+          <i class="fas fa-home fa-2x home-icon"></i>
+        </a>
+        
+            <!-- <img src="https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg" alt=""> -->
+            <a href="https://www.sltrib.com/"><img class="d-none d-sm-block" src="assets/img/image.png" alt="" style="height: 30px;"></a>
+       
+       
+        <ul class="nav-links">
+          <!-- <li class="nav-item d-none"><a href="#">ADD LATER IF NECESSARY</a></li> -->
+          <li class="nav-item btn-danger p-1 rounded donate-button mt-2"><a href="#">DONATE</a></li>
+          <!-- <li class="nav-item p-2"><a href="#">SIGN IN</a></li>
+          <li class="nav-item p-2"><a href="#">SUBSCRIBE</a></li> -->
+        </ul>
+        
+      </nav>
+
+    <!-- <nav class="navbar sticky-top navbar-light bg-light page-gradient">
+        <ul class="list-items">
+        <li><a href="#"><i class="fas fa-home fa-lg text-white"></i></a></li>
+        <li><a class="btn-danger rounded p-1" href="https://www.sltrib.com/donate/">DONATE</a></li>
+    </ul>
+    </nav> -->
+
+<div class="container">
+
+
+<!-- MORE OLD CODE -->
+<a href="https://www.sltrib.com/"><img src="https://archive.sltrib.com/img/logo_sltrib_black1.png" class="img-responsive" alt="The Salt Lake Tribune"></a>
+<span class="weather-traffic">
+            <script type="text/javascript">
+                          <!--
+      
+                          var m_names = new Array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC");
+                          var d = new Date();
+                          var curr_date = d.getDate();
+                          var curr_month = d.getMonth();
+                          var curr_year = d.getFullYear();
+                          document.write(m_names[curr_month]  + " " + curr_date + ", " + curr_year);
+      
+                          //-->
+                          </script> &nbsp;&nbsp; 
+</span>
+
+<!-- MORE OLD CODE END-->
+
+
+<!-- OLD CODE -->
+<div class="col-md-16 hr-double">
+  <div class="actual"></div>
+</div>
+<!-- OLD CODE END-->
+
+    <div class="empty-div" style="height: 300px;"></div>
+
+<!--OLD CODE BLOCK-->
+<!--IT WOULD BE NICE TO GET THIS TO WORK... -->
+<div class="container">
+<div class="visible-xs">
+  <div class="input-group" style="margin-top:10px;margin-bottom:20px;">
+    <input type="text" class="form-control" placeholder="search archives" id="searchInput2">
+    <span class="input-group-btn">
+    <button class="btn btn-default" type="button" id="searchButton2"><i class="fa fa-search"></i></button>
+    </span>
+  </div>
+</div>
+</div>
+<!--OLD CODE BLOCK END-->
+
+<!--OLD .JS CODE HERE-->
+
+
+<!--OLD .JS CODE HERE END-->
+
+
+
+<!--  OLD FORMS MAIN CONTENT WITH TABS HERE  -->
+<div id="main-content"> 
+		<div class="container">
+      <div id="articleCont" class="col-md-16">
+        Use this archive search for content more than 60 days old. Note that some stories from the National and World sections of the newspaper are neither searchable nor archived.<br><br>
+        <div class="archiveSearchBox">
+        <form class="form-inline"  action="http://www.newslibrary.com/nlsearch.asp" method="get" target="results" >
+           <input type="hidden" name="region" value='SLTB'/>
+           <input type="hidden" name="search_mode" value="advanced"/>
+
+  <div class="form-group">
+                    Search For:
+                    <input type="text" name="keywords" size="30" value="" class="form-control" />
+  </div>	
+  <div class="form-group">			
+                    Appearing:
+                   
+                        <select name="field1" size="1" class="form-control">
+                            <option value="allfields" selected>Anywhere in the story</option>
+                            <option value="headline">in headline</option>
+                            <option value="byline">in byline</option>
+                            <option value="headline,lead">in headline or lead graph</option>
+                            <option value="section">in section</option>
+                        </select>
+         </div>          
+                
+        <br>        
+  <div class="form-group" style="margin-top:10px;">
+                      <input type="RADIO" name="date_mode" value="year" checked="true" />
+                      Choose articles from:
+                      <select name="year" class="form-control">
+                          <option value="all">all</option>
+                            <option value="last 31 days" selected>last 31 days</option>
+                            <option value="last 180 days">last 180 days</option>
+          <? for($i=2017;$i>=1991;$i--) { ?>
+                          <option value="<? echo $i; ?>"><? echo $i; ?></option>
+                        <? } ?>
+                        </select>
+  </div>
+  <div style="margin-top:10px;">
+                      <input type="RADIO" name="date_mode" value="range" />
+                      Date range:<br>
+                      <select name="start_month" class="form-control">
+                          <option value="">Month</option>
+                          <option value="1">January</option>
+                          <option value="2">February</option>
+                          <option value="3">March</option>
+                          <option value="4">April</option>
+                          <option value="5">May</option>
+                          <option value="6">June</option>
+                          <option value="7">July</option>
+                          <option value="8">August</option>
+                          <option value="9">September</option>
+                          <option value="10">October</option>
+                          <option value="11">November</option>
+                          <option value="12">December</option>
+                        </select>
+                        <select name="start_day" class="form-control">
+                          <option value="">Day</option>
+                        <? for($d=1;$d<=31;$d++) { ?>
+                          <option value="<? echo $d; ?>"><? echo $d; ?></option>
+                        <? } ?>
+                        </select>
+                        <select name="start_year" class="form-control">
+                          <option value="">Year</option>
+                        <? for($i=2017;$i>=1991;$i--) { ?>
+                          <option value="<? echo $i; ?>"><? echo $i; ?></option>
+                        <? } ?>
+                        </select>
+                        &nbsp; to &nbsp;
+                        <select name="end_month" class="form-control">
+                          <option value="">Month</option>
+                          <option value="1">January</option>
+                          <option value="2">February</option>
+                          <option value="3">March</option>
+                          <option value="4">April</option>
+                          <option value="5">May</option>
+                          <option value="6">June</option>
+                          <option value="7">July</option>
+                          <option value="8">August</option>
+                          <option value="9">September</option>
+                          <option value="10">October</option>
+                          <option value="11">November</option>
+                          <option value="12">December</option>
+                        </select>
+                        <select name="end_day" class="form-control">
+                          <option value="">Day</option>
+          <? for($d=1;$d<=31;$d++) { ?>
+                          <option avlue="<? echo $d; ?>"><? echo $d; ?></option>
+                        <? } ?>
+                        </select>
+                        <select name="end_year" class="form-control">
+                          <option value="">Year</option>
+                        <? for($i=2017;$i>=1991;$i--) { ?>
+                          <option value="<? echo $i; ?>"><? echo $i; ?></option>
+                        <? } ?>
+                        </select>
+                    
+         <hr>           	
+        </div>    
+  <br>
+  <div class="form-group">
+                  Sort by:
+
+                        <select name="SORT" size="1" class="form-control">
+                            <option value="d:h" selected>Most Recent First</option>
+                            <option value="r:h">Oldest first</option>
+                            <option value="h:d">Relevance</option>
+                            <option value="w:h">Frequency of search terms</option>
+                        </select>
+  </div>				
+
+  <div class="form-group">
+                  Results Per Page:
+                    
+                        <select name="NITEMS" size="1" class="form-control">
+                            <option value="10" selected>10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+  </div>
+  <div class="form-group">			
+                  
+                    <input type="submit" value="Search" class="archiveButton coloredBox form-control"/>
+        </div>        
+
+        </form>
+        </div>
+        <br /><br />
+        Please note the archive does not contain wire service stories, stories from other papers, photographs, calendar items, or advertisements (including paid funeral notices).<br /><br />
+        Generally, the material is current 24 hours after publication.<br /><br />
+        You may search the archive and scan headlines for free. A fee of $2.95 is charged for each story displayed in full. To view stories you must create an account with NewsLibrary. By setting up an account, your credit card number will be kept on file so that you will not have to enter it each time you wish to retrieve the full text of an article.<br /><br />
+        <b>Pricing options</b><br />
+        <ul style="list-style-position:inside;">
+           <li>Single article	$2.95</li>
+           <li>3 article pack	$6.95, good for one week</li>
+           <li>10 article pack	$21.95, good for one month</li>
+           <li>25 article pack	$49.95, good for one month</li>
+           <li>40 article pack	$79.95, good for one month</li>
+           <li>50 article pack	$100.00, good for one month</li>
+           <li>600 article pack	$1200.00, good for one year</li>
+           <li>1200 article pack	$2000.00, good for one year</li>
+        </ul><br /><br />
+        <b>Archive Search Help</b><br />
+        If you have any technical difficulties with your password or payment options, please contact NewsBank at 1-800-896-5587 or by e-mail at <a href="mailto:tribaccess@newsbank.com">tribaccess@newsbank.com.</a> NewsBank will respond within one business day.<br /><br />
+        You may get a printed copy of the newspaper from the last 30 days by calling (801) 237-2927.<br /><br />
+        For reprints of photographs taken by Salt Lake Tribune photographers, please call (801) 257-8930.<br /><br />
+        For articles before 1990 please call the Salt Lake Tribune Datacenter at 801-257-8930 or e-mail <a href="mailto:dara@sltrib.com">dara@sltrib.com.</a>
+     </div>
+     <div class="col-md-8 hidden-sm hidden-xs">
+<div id="acAdContainer">
+  <div id="monsterAd">
+
+<script>
+if(udsAdWidth > 767) {
+document.write("<div id='largecube' class='ad-container' style='margin-top:20px;'>");
+googletag.cmd.push(function() { googletag.display("largecube"); });
+document.write("</div>");
+}
+</script>
+
+    </div>
+</div>
+<iframe src="https://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fsaltlaketribune&amp;width=304&amp;colorscheme=light&amp;show_faces=true&amp;stream=false&amp;header=true&amp;height=210" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:304px; height:210px; margin-bottom:12px;" allowTransparency="true"></iframe>
+<div id="halfIntContainer" style="padding-bottom:15px; width:300px; height:250px;">
+<script>
+if(udsAdWidth > 767){
+document.write("<div id='cube3'>");
+  googletag.cmd.push(function() { googletag.display("cube3"); });
+    document.write("</div>");
+}
+
+</script>
+</div>
+  <!-- ?php include("assets/includes/topJobs.html"); ? -->
+</div>
+
+    </div>
+</div><!-- /.main-content -->
+
+
+
+<!--  OLD FORMS MAIN CONTENT WITH TABS END -->
+
+
+
+
+    <div class="container">
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+          </div>
+        </div>
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <label class="form-check-label" for="gridRadios1">
+                  First radio
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <label class="form-check-label" for="gridRadios2">
+                  Second radio
+                </label>
+              </div>
+              <div class="form-check disabled">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                <label class="form-check-label" for="gridRadios3">
+                  Third disabled radio
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-group row">
+          <div class="col-sm-2">Checkbox</div>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck1">
+              <label class="form-check-label" for="gridCheck1">
+                Example checkbox
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    
+    
+    
+    <!-- <div class="row">
+        <div class="col-12">
+            <a href="https://www.sltrib.com/">
+            <img src="https://www.sltrib.com/pb/resources/assets/img/vectors/sltrib-logo.svg" alt="" class="mx-auto d-block trib-header center m-3">
+        </a>
+    </div> -->
+    <!-- end of row -->
+</div>
+<!-- end of main container -->
+</div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+</body>
+</html>
