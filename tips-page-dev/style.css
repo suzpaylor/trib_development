@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 5px solid red;
+}
+
+.heading-wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: 5px solid orange;
+    margin: 20px;
+}
+
+.icons-group-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+sald;sf
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 5px solid blue;
+}
+
+.card {
+    display: inline;
+    justify-content: center;
+    /* margin: 0 auto;
+    float: none; */
+    max-width: 500px;
+    border: 5px solid purple;
+    margin: 20px;
+}
