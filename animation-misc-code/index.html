@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="all_content">
+        <div class="icons_title">Explore the Word of Wisdom</div>
+        
+        <div id="icons" class="icon_container">
+        <div id="beer" class="icondiv"> 
+            <img class="wowicon beer" name="beer" src="images/beer.png" width="147" height="203" scale="0"> 
+            </div>
+        <div id="cigarette" class="icondiv"> 
+            <img class="wowicon cigarette" name="cigarette" src="images/cigarette.png" width="147" height="203" scale="0"> 
+            </div>
+        <div id="coffee" class="icondiv"> 
+            <img onmouseover="flipFunction()" onmouseout="returnFunction()" id="coffee_flip" class="wowicon coffee" name="coffee" src="images/coffee.png" width="147" height="203" scale="0"> 
+            </div>
+        <div id="cola" class="icondiv"> 
+            <img class="wowicon cola" name="cola" src="images/cola.png" width="147" height="203" scale="0"> 
+            </div>
+        <div id="kava" class="icondiv"> 
+            <img class="wowicon kava" name="kava" src="images/kava.png" width="147" height="203" scale="0"> 
+            </div>
+        <div id="mate" class="icondiv"> 
+            <img class="wowicon mate" name="mate" src="images/mate.png" width="147" height="203" scale="0"> 
+            </div>
+        <div id="tea" class="icondiv"> 
+            <img class="wowicon tea" name="tea" src="images/tea.png" width="147" height="203" scale="0"> 
+            </div>
+        <div id="wine" class="icondiv"> 
+            <img class="wowicon wine" name="wine" src="images/wine.png" width="147" height="203" scale="0"> 
+            </div>
+        </div>
+            <div id="tooltip" class="text">Kava, a drink made from the kava root and popular with Pacific Islanders, is a relaxant that is neither alcoholic, fermented or caffeinated. But there are no consistent Mormon rules about its use — even in Hawaii’s LDS-dominated Laie area, some lay LDS leaders ask about kava in temple recommend interviews, while others don’t. Some argue that “irresponsible socialization” during kava parties should be banned, not kava itself, says BYU-Hawaii professor Chiung Hwang Chen. Others “embrace the ban fully, teaching/believing that the substance itself is problematic.”</div>
+            
+            </div>
+
+    <script>
+
+		
+		function flipFunction() {
+    document.getElementById("coffee_flip").src = "images/coffee_down.png";
+}
+		
+		function returnFunction() {
+    document.getElementById("coffee_flip").src = "images/coffee.png";
+}
+		
+	
+	var labels={
+		beer:"Mormon founder Joseph Smith provided his “word of wisdom” about what to eat and drink as guidance, not as a “commandment or constraint,” in the 1830s. Despite its admonition against strong drinks, throughout the 19th century some members continued to enjoy beer at ward parties; some leaders found favorites among the varieties that arrived with immigrant converts. LDS apostles John Henry Smith and Brigham Young Jr. “both thought that the church ought not interdict beer, or at least not Danish beer,” historian Thomas G. Alexander writes. But the church moved toward stricter enforcement with the rise of national Prohibition sentiment.",
+		cigarette:"Doctrine and Covenants Section 89, where the Word of Wisdom is found, discourages tobacco use. But during most of the 19th century, Mormon leaders partook of all the forbidden “fruits” it lists — with some smoking or chewing tobacco. In 1902, as leaders were moving toward a more rigid interpretation, President Joseph F. Smith urged leniency for old men who used tobacco (and old ladies who drank tea). ",
+		cola:"Over the years, many Mormons (and others) have concluded — incorrectly — that caffeine was the culprit behind the Word of Wisdom’s ban on hot drinks, and have shunned colas as a result. In the 1920s, Coca-Cola executives reached out to LDS Church President Heber J. Grant. After receiving assurances that “objectionable ingredients” had been removed, Grant wrote in the 1930s, “we have withdrawn our objections to its use as a beverage.” During Mitt Romney’s 2012 U.S. presidential campaign, the church noted that “the revelation spelling out health practices ... does not mention the use of caffeine.”",
+		kava:"Kava, a drink made from the kava root and popular with Pacific Islanders, is a relaxant that is neither alcoholic, fermented or caffeinated. But there are no consistent Mormon rules about its use — even in Hawaii’s LDS-dominated Laie area, some lay LDS leaders ask about kava in temple recommend interviews, while others don’t. Some argue that “irresponsible socialization” during kava parties should be banned, not kava itself, says BYU-Hawaii professor Chiung Hwang Chen. Others “embrace the ban fully, teaching/believing that the substance itself is problematic.”",
+		mate:"Like kava, maté — the national drink of Argentina — has a confusing status. It is embraced by many Mormons in South America, but it is condemned for being rich with caffeine and is questioned for its cultural traditions. “We were forbidden from drinking maté (as was the whole South American south area),” writes a missionary who served from 2007 to 2009. “The primary reason offered was hygiene, as everyone’s mouth would touch the ‘bombilla’ [communal gourd] as the maté was passed around.”",
+		tea:"In the late 1800s, Apostle George Teasdale opined that “no one ought to be kept from working in the Sunday school because he drank tea and that eating pork was a more serious breach than drinking tea or coffee,” historian Thomas G. Alexander writes. But the Word of Wisdom’s admonition against “hot drinks” eventually solidified into a ban against both. Seth Rogers, who served in the LDS Japan Fukuoka Mission in the mid-1990s, said he was allowed to drink only barley and wheat teas. “All other teas in Japan, including the ubiquitous green tea, were strictly off-limits.” Given how much tea the Japanese “consume on all occasions,” says Rogers, “this was a real trial for the members there.”",
+		coffee:"The Word of Wisdom says “hot drinks are not for the body or belly.” Hyrum Smith, brother of LDS Church founder Joseph Smith, clarified in 1842 that the warning  “does refer to tea, and coffee.” But it remained common for early Mormons to drink both. Emmeline B. Wells, who became general president of the Relief Society, “drank an occasional cup of coffee,” historian Thomas G. Alexander writes. Today, some note, the ban separates many Mormons, especially non-Americans, from the hospitality and unity that sharing coffee or tea can provide between diverse populations.",
+		wine:"The Word of Wisdom advises against drinking wine — but it was used in the church’s sacrament, or communion, until the turn of the 20th century. Authorities routinely drank it, sold it and, served it. (Future church President George Albert Smith “took brandy for medicinal reasons,” historian Thomas G. Alexander writes.) But by the time the U.S. repealed Prohibition laws, Mormonism’s abstinence from alcohol had become increasingly codified. Today, more than three-quarters of Mormons born before 1965 see shunning alcoholic beverages as essential to being “a good Mormon.”"
+	}
+	
+	document.getElementById("icons").addEventListener("mousemove", function(event){
+		for(i=0;i<document.getElementsByClassName("wowicon").length;i++){
+			document.getElementsByClassName("wowicon")[i].addEventListener("mousemove", function(event){
+				//console.log(this.attributes.name.value);
+				document.getElementById("tooltip").innerHTML=labels[this.attributes.name.value];
+			});
+		};
+	});
+
+	
+    
+    </script>
+</body>
+</html>
+
+<!--FIND THIS CODE HERE "http://local.sltrib.com/online/WoW/"-->
