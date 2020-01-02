@@ -1,0 +1,55 @@
+.overline {
+    text-decoration: overline red;
+}
+
+.line-through {
+    text-decoration: line-through orange;
+}
+
+.underline {
+    text-decoration: underline yellow;
+}
+
+.underline-overline {
+    text-decoration: underline overline green;
+}
+
+.dotted {
+    text-decoration: underline overline dotted blue;
+}
+
+.wavy {
+    text-decoration: underline overline wavy purple;
+}
+
+.underline-overline-double {
+    text-decoration: underline overline double pink;
+}
+
+.orientation {
+    writing-mode: vertical-lr;
+    display: inline;
+    transition: .5s ease-in-out;
+    animation-name: fun;
+    animation-duration: 5s;
+}
+
+@keyframes fun {
+    from {color: black;}
+    to {color: blue;}
+  }
+
+.orientation:hover {
+    color: grey;
+    font-size: 1.2em;
+    animation-name: fun;
+    animation-duration: 3s;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+  }
