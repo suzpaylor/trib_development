@@ -46,10 +46,19 @@
     animation-duration: 3s;
 }
 
-div {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    animation-name: example;
-    animation-duration: 4s;
+
+
+  .align-me {
+      height: 50px;
+      border: 3px solid orange;
+      text-align: center;
+      line-height: 50px;
+      width: 200px;
+      border-radius: 6px;
+      background-color: pink;
+      transition: .5s;
+  }
+
+  .align-me:hover {
+      opacity: .5;
   }
