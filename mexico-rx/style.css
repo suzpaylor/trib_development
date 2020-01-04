@@ -1,4 +1,14 @@
 
+.fix-top-mobile {
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 600px) {
+    .fix-top-mobile {
+      margin-top: -30px!important;
+      padding: -20px!important;
+    }
+  }
 
 .image-wrapper img {
     width: 100%!important;
@@ -15,8 +25,15 @@
     padding: auto 0!important;
     /* padding-left: -50px!important; */
 }
+.authors {
+    color: grey;
+    font-size: 1.2em;
+}
+
+
 .chart-wrapper {
     width: 100%;
+    max-width: 1200px;
 }
 
 /* USED FROM DECADE PAGE */
@@ -28,7 +45,22 @@
 .content-wrapper {
     padding-left: 20px;
     padding-right: 20px;
-    max-width: 1000px;
+    max-width: 1240px;
+}
+
+.content-wrapper p {
+   line-height: 1.6 re;
+}
+
+/* .wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+} */
+
+.wrapper {
+    justify-content: space-around;
+    display: inline-flex;
 }
 
 .top-heading {
@@ -54,7 +86,7 @@
 }
 
 .line2 {
-    font-size: 1.6em!important;
+    font-size: 1.6rem!important;
     display: block;
     max-width: 1000px;
 }
@@ -103,6 +135,11 @@
     margin-bottom: 50px; 
 } 
 
+.left-right-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 #preload {
 
     -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
@@ -139,4 +176,58 @@
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+
+  /* TEXT MEDIA QUERIES */
+  @media screen and (min-width: 982px) {
+    p {
+      font-size: 1rem;
+      line-height: 1.6rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    p {
+      font-size: 16px;
+      line-height: 1.5rem;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    p {
+      font-size: 16px;
+      line-height: 1.4rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+     .small-mobile {
+      font-size: 18px;
+      line-height: 1.4rem;
+    }
+  }
+
+  .align-text {
+      height: 40px;
+      line-height: 40px;
+      padding-top: 5px;
+      padding-right: 10px
+  }
+
+  .wrapper {
+      justify-content: left;
+  }
+
+  .line:after {
+    display:block;
+    clear:both;
+    content : "";
+    position: relative;
+    left    : 0;
+    bottom  : 0;
+    max-width:600px;
+    height  : 1px;
+    width   : 90%;  /* or 100px */
+    border-bottom:3px solid #526B44;
+    margin:0 auto;
+    padding:20px 0px;
 }
