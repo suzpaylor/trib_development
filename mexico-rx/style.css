@@ -3,6 +3,32 @@
     margin-top: 0px;
 }
 
+.main-heading {
+    font-family: Georgia, sans-serif;
+    font-weight: normal;
+}
+
+@media screen and (min-width: 992px) {
+    .main-heading {
+    font-size: 2.95238rem;
+    line-height: 1.0625;
+}
+}
+
+@media screen and (max-width: 992px) {
+    .main-heading {
+    font-size: 1.4rem;
+    line-height: 1.625;
+}
+}
+
+@media screen and (max-width: 992px) {
+    .main-heading {
+    margin-top: -10px;
+}
+}
+
+
 @media screen and (max-width: 600px) {
     .fix-top-mobile {
       margin-top: -30px!important;
@@ -30,6 +56,11 @@
     font-size: 1.2em;
 }
 
+@media screen and (max-width: 992px) {
+    .authors {
+    font-size: 1em;
+}
+}
 
 .chart-wrapper {
     width: 100%;
@@ -48,20 +79,24 @@
     max-width: 1240px;
 }
 
+.content-wrapper-donate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 300px;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .content-wrapper p {
    line-height: 1.6 re;
 }
 
-/* .wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-} */
 
-.wrapper {
-    justify-content: space-around;
-    display: inline-flex;
-}
+
 
 .top-heading {
     padding-top: 10px;
@@ -75,11 +110,7 @@
     justify-content: center;
 }
 
-.content-wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 1000px;
-}
+
 
 .headings {
     text-align: center;
@@ -91,11 +122,11 @@
     max-width: 1000px;
 }
 
-.icony{
+.icony {
     transition: opacity 0.5s ease-in-out;
 }
 
-.icony:hover{
+.icony:hover {
     opacity: .5;
 }
 
@@ -206,28 +237,26 @@
     }
   }
 
-  .align-text {
-      height: 40px;
-      line-height: 40px;
-      padding-top: 5px;
-      padding-right: 10px
-  }
+  
 
-  .wrapper {
-      justify-content: left;
-  }
+ 
 
-  .line:after {
-    display:block;
-    clear:both;
-    content : "";
-    position: relative;
-    left    : 0;
-    bottom  : 0;
-    max-width:600px;
-    height  : 1px;
-    width   : 90%;  /* or 100px */
-    border-bottom:3px solid #526B44;
-    margin:0 auto;
-    padding:20px 0px;
+  @media screen and (max-width: 480px) {
+    div .content-wrapper-headings {
+        padding-top: 5px;
+        padding-bottom: 5px;
+   }
+ }
+
+ @media screen and (max-width: 992px) {
+    .icon-group {
+    margin-top: -10px;
+    margin-bottom: -10px;
 }
+}
+
+@media screen and (max-width: 480px) {
+    .first-content {
+        padding-top: 5px;
+   }
+ }
