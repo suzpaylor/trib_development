@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Opening Move', 'Percentage'],
+          ["King's pawn (e4)", 44],
+          ["Queen's pawn (d4)", 31],
+          ["Knight to King 3 (Nf3)", 12],
+          ["Queen's bishop pawn (c4)", 10],
+          ['Other', 3]
+        ]);
+
+        var options = {
+          animation : {
+              startup: true,
+              duration: 5000,
+              easing: 'out',
+
+          },
+          title: 'Chess opening moves',
+          width: 900,
+          legend: { position: 'none' },
+          chart: { title: 'Chess opening moves',
+                   subtitle: 'popularity by percentage' },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          axes: {
+            x: {
+              0: { side: 'top', label: 'Percentage'} // Top x-axis.
+            }
+          },
+          bar: { groupWidth: "90%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        chart.draw(data, options);
+      };
+    </script>
+    <div id="top_x_div" style="width: 900px; height: 500px;"></div>
+    <div id="chart-div"></div>
+    
+<script> 
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+var data = google.visualization.arrayToDataTable([
+  ['Year', 'Sales', 'Expenses'],
+  ['2004',  0,      0],
+  ['2005',  0,      0],
+  ['2006',  0,      0],
+  ['2007',  0,      0]
+]);
+
+var options = {
+  title: 'Company Performance',
+   animation: {
+      duration: 1000,
+      easing: 'out'
+  },
+  vAxis: {title: 'Year',  titleTextStyle: {color: 'red'}, minValue:0, maxValue:1000}
+};
+var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+chart.draw(data, options);
+
+var data = google.visualization.arrayToDataTable([
+  ['Year', 'Sales', 'Expenses'],
+  ['2004',  1000,      400],
+  ['2005',  1170,      460],
+  ['2006',  660,       1120],
+  ['2007',  1030,      540]
+]);
+chart.draw(data, options);
+
+};
+</script>
+</body>
+</html>

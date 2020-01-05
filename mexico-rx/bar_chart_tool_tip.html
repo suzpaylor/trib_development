@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+  
+
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script>
+  google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawBasic);
+
+function drawBasic() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Country', 'Cost', {role: 'annotation'},  {role: 'tooltip', p: {html: true}}],
+        ['United States', 16597, 'United States $16,597 🇺🇸', '🇺🇸 $16,597'],
+        ['Germany', 4728, 'Germany $4,728 🇩🇪', '🇩🇪 $4,728'],
+        ['Netherlands', 3742, 'Netherlands $3,742 🇳🇱', '🇳🇱 $3,742'],
+        ['Sweden', 3612, 'Sweden $3,612 🇸🇪', '🇸🇪 $3,612'],
+        ['Ontario*', 3557, 'Ontario* $3,557 🇨🇦', '🇨🇦 $3,557'],
+        ['Switzerland', 3475, 'Switzerland $3,475 🇨🇭', '🇨🇭 $3,475'],
+        ['Australia', 3043, 'Australia $3,042 🇦🇺', '🇦🇺 $3,042'],
+        ['United Kingdom', 2921, 'United Kingdom $2,921 🇬🇧', '🇬🇧 $2,921'],
+        ['France', 2455, 'France $2,455 🇫🇷', '🇫🇷 $2,455']
+      ]);
+
+      var options = {
+        padding: '5px',
+        width: 425,
+        height: 500,
+        chartArea: {
+          left: "10%",
+          right: "1%",
+          top: "10%",
+          height: "100%",
+          width: "20%"
+        },
+        colors: ['grey'],
+        textStyle: {color: "grey"},
+        fontSize: 14,
+        hAxis: {
+            gridlines: {color: 'transparent'},
+            title: '',
+            textStyle: {
+              color: 'grey',
+              fontSize: '18',
+              textPosition: 'none',
+              opacity: 0
+            },
+          
+        },
+        vAxis: {
+          gridlines: {color: 'transparent'},
+          textPosition: 'none',
+          title: '',
+          baselineColor: 'grey',
+          textStyle: {
+            color: 'grey',
+            fontSize: '24'
+          }
+        }
+      };
+     
+      var chart = new google.visualization.BarChart(document.getElementById('meth'));
+
+      chart.draw(data, options);
+    }
+  </script>
+  
+
+
+<body>
+  <!-- <p style="margin-top: -40px; margin-bottom: 5pt; line-height: 20px; font-family: sans-serif; font-size: 22px; color: gray">Meth overdose deaths in Utah</p>
+  <p style="margin-bottom: 15pt; line-height: 18px; max-width: 800px; font-family: sans-serif; font-size: 14px; color: darkgray">Overdose deaths involving methamphetamine have risen precipitously in recent years. This graph shows the crude rate of accidental and undetermined deaths in Utah involving methamphetamine per 100,000 population, 2000-2018.</p> -->
+<div id="meth" style="width: 100%; max-width: 500px;"></div>
+  <!-- <p style="z-index: 1000important!; margin-top: -40px; margin-bottom: -3pt; font-family: sans-serif; font-size: 10px; color: gray">Source: The Utah Department of Health</p>
+  <p style="font-family: sans-serif; font-size: 10px; color: darkgray">Graphic by Christopher Cherrington | The Salt Lake Tribune</p> -->
+
+      
+</body>
+</html>
