@@ -41,15 +41,23 @@
     transition: all 0.3s ease-in-out;
 }
 
+.far .fa-clipboard .fa-5x {
+   transition: 0.5s;
+}
+
+.far .fa-clipboard .fa-5x:hover {
+    opacity: 0.5;
+}
+
 .rotate {
     transition: all 0.3s ease-in-out;
 }
 
 .rotate:hover {
-    transform: rotate(8deg) scale(1.2);
+    transform: rotate(8deg) scale(1.1);
     opacity: .5;
 
-}
+}  
 
 .cards-wrapper {
     display: flex;
@@ -64,15 +72,23 @@
     /* margin: 0 auto;
     float: none; */
     max-width: 500px;
-    border: 5px solid purple;
+    /* border: 5px solid purple; */
     margin: 20px;
 }
 
 .card-header {
-    background-color: #2d4977;
+    background-color: #bdc4cf;
 }
 
 .trib-blue {
     background-color: #2d4977;
     opacity: 0.5;
+}
+
+.icony:hover {
+    opacity: 0.5;
+}
+
+.icony {
+    opacity: 0.9;
 }
