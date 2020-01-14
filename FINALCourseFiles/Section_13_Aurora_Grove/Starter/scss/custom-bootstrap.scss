@@ -1,0 +1,9 @@
+//over-ride default colors and 
+$theme-colors: (
+    "primary": #36b3a8
+);
+
+
+//imports bootstrap
+
+@import "../bootstrap-4.0.0/scss/bootstrap.scss"
