@@ -1,0 +1,164 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
+<c:set var="isSSI" value="${fn:containsIgnoreCase(requestUri, '/ssi')}"/>
+<jsp:useBean id="date" class="java.util.Date" />
+<fmt:formatDate value="${date}" pattern="yyyy" var="currentYear" />
+
+<!--COLUMN 1 FOOTER SOCIAL BUTTONS-->
+<footer class="hide-on-print">
+    <div class="footer-menu row helv-roman">
+        <div class="menu-col col-xs-12 col-md-3 no-gutters social">
+            <span class="col-heading helv-bold hidden-xs hidden-sm">Connect</span>
+            <ul class="sub-menu social-sub">
+                <li><a href="http://www.facebook.com/saltlaketribune" target="_blank">
+                    <div class="icon d-inline-block text-center">
+                        <%@ include file="/resources/assets/icons/sltrib/jsp/facebook.jsp" %>
+                    </div>
+                    <span class="hidden-xs hidden-sm">Facebook</span>
+                </a></li>
+                <li><a href="https://www.twitter.com/sltrib" target="_blank">
+                    <div class="icon d-inline-block text-center">
+                        <%@ include file="/resources/assets/icons/sltrib/jsp/twitter.jsp" %>
+                    </div>
+                    <span class="hidden-xs hidden-sm">Twitter</span>
+                </a></li>
+                <li><a href="https://www.instagram.com/sltrib/" target="_blank">
+                    <div class="icon d-inline-block text-center">
+                        <%@ include file="/resources/assets/icons/sltrib/jsp/instagram.jsp" %>
+                    </div>
+                    <span class="hidden-xs hidden-sm">Instagram</span>
+                </a></li>
+                <li><a href="https://www.youtube.com/sltrib">
+                    <div class="icon d-inline-block text-center" target="_blank">
+                        <%@ include file="/resources/assets/icons/sltrib/jsp/youtube.jsp" %>
+                    </div>
+                    <span class="hidden-xs hidden-sm">YouTube</span>
+                </a></li>
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/rss/">
+                    <div class="icon d-inline-block text-center" target="_blank">
+                        <%@ include file="/resources/assets/icons/sltrib/jsp/rss.jsp" %>
+                    </div>
+                    <span class="hidden-xs hidden-sm">RSS</span>
+                </a></li>
+            </ul>
+        </div>
+
+        <!--COLUMN 2 FOOTER-->
+        <div class="menu-col col-xs-6 col-md-3 no-gutters hidden-sm hidden-xs">
+            <span class="col-heading helv-bold hidden-xs hidden-sm"><a href="${isSSI ? 'https://www.sltrib.com' : ''}/Subscribe/">Subscribe</a></span>
+            <ul class="sub-menu hidden-xs hidden-sm">
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/newsletters/">Email Newsletters</a></li>
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/podcasts/">Podcasts</a></li>
+                <li><a href="https://store.sltrib.com/">Store</a></li>
+                <hr align="left" style="margin-top: 0px; margin-bottom: 10px; width:20%; color: black!important; height: 3px;">
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/tips/">News Tips</a></li>
+                <li><a href="https://archive.sltrib.com/">Archives</a></li>
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/donate-faq/">Frequently Asked Questions</a></li>
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/contact-us/">Help & Contact Info</a></li>
+            </ul>
+        </div>
+
+        <!--COLUMN 3 FOOTER-->
+        <div class="menu-col col-xs-6 col-md-3 no-gutters hidden-sm hidden-xs">
+            <span class="col-heading helv-bold hidden-xs hidden-sm"><a href="${isSSI ? 'https://www.sltrib.com' : ''}/about-us/">About Us</a></span>
+            <ul class="sub-menu hidden-xs hidden-sm">
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/history-mission/">History & Mission</a></li>
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/nonprofit/">Our Nonprofit Model</a></li>
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/board-and-advisers/">Board and Advisers</a></li>
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/staff/">Officers and Staff</a></li>
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/reports/">Reports</a></li>
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/educators/">For Educators</a></li>
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/donate/">Donate</a></li>
+                
+                
+            </ul>
+        </div>
+        <div class="menu-col col-xs-6 col-md-3 no-gutters hidden-xs hidden-sm">
+            <span class="col-heading helv-bold hidden-xs hidden-sm"><a href="${isSSI ? 'https://www.sltrib.com' : ''}/terms-of-service/">Terms of Service</a></span>
+            <ul class="sub-menu hidden-xs hidden-sm">
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/privacy-policy/#california">California Privacy</a></li>
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/policies-and-ethics/">Editorial Policies and Ethics</a></li>
+                <!-- <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/commenting-policy/">Commenting Policy</a></li>  -->
+                <li><a href="${isSSI ? 'https://www.sltrib.com' : ''}/advertise-with-us/">Advertise with us</a></li>
+                <li><a href="http://legalnotices.sltrib.com/">Legal Notices</a></li>
+                
+            </ul>
+        </div>
+        <!--MOVE ALL THAT SHOW ON MOBILE HERE-->
+        <div class="menu-col col-xs-6 col-md-3 no-gutters">
+            <span class="col-heading helv-bold hidden-md hidden-lg">
+                <a class="d-flex justify-content-center" href="${isSSI ? 'https://www.sltrib.com' : ''}/about-us/">About Us</a>
+            </span>
+        </div>
+        <div class="menu-col col-xs-6 col-md-3 no-gutters">
+            <span class="col-heading helv-bold hidden-md hidden-lg">
+                <a class="d-flex justify-content-center" href="${isSSI ? 'https://www.sltrib.com' : ''}/subscribe/">Subscribe</a>
+            </span>
+        </div>
+        <div class="menu-col col-xs-6 col-md-3 no-gutters">
+            <span class="col-heading helv-bold hidden-md hidden-lg">
+                <a class="d-flex justify-content-center" href="${isSSI ? 'https://www.sltrib.com' : ''}/terms-of-service/">Terms of Service</a>
+            </span>
+        </div>
+        <div class="menu-col col-xs-6 col-md-3 no-gutters">
+            <span class="col-heading helv-bold hidden-md hidden-lg">
+                <a class="d-flex justify-content-center" href="${isSSI ? 'https://www.sltrib.com' : ''}/newsletters/">Email Newsletters</a>
+            </span>
+        </div>
+        <div class="menu-col col-xs-6 col-md-3 no-gutters">
+            <span class="col-heading helv-bold hidden-md hidden-lg">
+                <a class="d-flex justify-content-center" href="${isSSI ? 'https://www.sltrib.com' : ''}/policies-and-ethics/">Editorial Policy</a>
+            </span>
+        </div>
+        <div class="menu-col col-xs-6 col-md-3 no-gutters">
+            <span class="col-heading helv-bold hidden-md hidden-lg">
+                <a class="d-flex justify-content-center" href="${isSSI ? 'https://www.sltrib.com' : ''}/podcasts/">Podcasts</a>
+            </span>
+        </div>
+        <div class="menu-col col-xs-6 col-md-3 no-gutters">
+            <span class="col-heading helv-bold hidden-md hidden-lg">
+                <a class="d-flex justify-content-center" href="${isSSI ? 'https://www.sltrib.com' : ''}/privacy-policy/">Privacy Policy</a>
+            </span>
+        </div>
+        <div class="menu-col col-xs-6 col-md-3 no-gutters">
+            <span class="col-heading helv-bold hidden-md hidden-lg">
+                <a class="d-flex justify-content-center" href="${isSSI ? 'https://www.sltrib.com' : ''}/tips/">News Tips</a>
+            </span>
+        </div>
+        <div class="menu-col col-xs-6 col-md-3 no-gutters">
+            <span class="col-heading helv-bold hidden-md hidden-lg">
+                <a class="d-flex justify-content-center" href="${isSSI ? 'https://www.sltrib.com' : ''}/advertise-with-us/">Advertise</a>
+            </span>
+        </div>
+        <div class="menu-col col-xs-6 col-md-3 no-gutters">
+            <span class="col-heading helv-bold hidden-md hidden-lg">
+                <a onclick="getMobileOperatingSystem()">Apps</a>
+            </span>
+        </div>
+        <div class="menu-col col-xs-6 col-md-3 no-gutters">
+            <span class="col-heading helv-bold hidden-md hidden-lg">
+                <a class="d-flex justify-content-center" href="${isSSI ? 'https://www.sltrib.com' : ''}/contact-us/">Contact us</a>
+            </span>
+        </div>
+        <div class="menu-col col-xs-6 col-md-3 no-gutters">
+            <span class="col-heading helv-bold hidden-md hidden-lg">
+                <a class="d-flex justify-content-center" href="${isSSI ? 'https://www.sltrib.com' : ''}/donate/">Donate</a>
+            </span>
+        </div>
+
+
+        
+    </div>
+
+    <div class="promo-in-footer">
+        <jsp:include page="../../sltrib/ad-v3/feature.jsp" />
+    </div>
+
+    <div class="colophon row">
+        <%@include file="logo.jsp" %>
+        <div class="col-md-9 copyright helv-roman no-gutters hidden-xs hidden-sm">sltrib.com &copy; 1996-<c:out value="${currentYear}" /> The Salt Lake Tribune. All rights reserved.</div>
+    </div>
+</footer>
