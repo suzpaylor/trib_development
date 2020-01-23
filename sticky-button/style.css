@@ -1,4 +1,4 @@
-.feedback {
+.subscribe-button {
     background-color : #4F77B2;
     color: white;
     padding: 10px 20px;
@@ -7,8 +7,15 @@
     opacity: .9;
   }
   
+
   #mybutton {
     position: fixed;
     right: 15px;
     bottom: 10px;
+  }
+
+  #button-2 {
+    position: fixed;
+    right: 15px;
+    bottom: 50px;
   }
