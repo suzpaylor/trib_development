@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
+    <title>Document</title>
+</head>
+<body>
+    <div>HELLO
+    <div id="spopup" style="display: none;">
+        <!--close button-->
+        <a style="position:absolute;top:14px;right:10px;color:#555;font-size:10px;font-weight:bold;" href="javascript:void(0);" onclick="return closeSPopup();">
+            <!-- <img src="ico-x.png" width="18" height="18"/> -->
+        </a>
+        <p>HELLO WORLD</p>
+        <!--insert popup content here-->
+    </div>
+</div>
+    <script>
+        $(window).scroll(function(){
+    if($(document).scrollTop()>=$(document).height()/5)
+        $("#spopup").show("slow");else $("#spopup").hide("slow");
+});
+function closeSPopup(){
+    $('#spopup').hide('slow');
+}
+    </script>
+</body>
+</html>
