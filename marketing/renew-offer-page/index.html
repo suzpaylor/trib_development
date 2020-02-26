@@ -4,30 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <title>Special Offer Page</title>
 </head>
 <body>
     <div class="page-wrapper">
-        <br>
-            <div class="image-section">
+            <div class="image-section hide-me-mobile">
                 <div class="image-wrapper">
                     <img src="https://local.sltrib.com/graphics/trib_logo_subtext.png" alt="">
                 </div>
             </div>
                         <!--EVERYTHING HERE WILL TRIGGER PIANO POPUP APPEAR-->
         <br>
+            <div class="content-wrapper-1">
+                <h3 class="text-center">We Miss you!</h3>
+                <p class="text-center">It looks like you didn't renew your subscription to <a href="https://www.sltrib.com/">sltrib.com</a>. </p>
+            </div>
             <div 
                 class="subscribe-button action text-center bold" 
                 data-offer="${offerId}" 
                 data-template="${templateId}"
                 data-checkout="${checkoutId}"
             >
+            <div class="image-section">
+                <div class="image-wrapper" style="height: 400px; width: 200px;">
+                    <img src="https://local.sltrib.com/graphics/take_the_tribune.jpg" alt="Cartoon asking user to subscribe to the SL Tribune">
+                </div>
+            </div>
+            <br>
             <div class="button-wrapper">
                 <div class="my-button">
                     <span>${buttonName}</span>
                 </div>
             </div>
+            <div class="content-wrapper-1">
+                <h3 class="font-italic">Resubscribe Today</h3>
+                <p>We sure have missed you.</p>
+                <p class="text-center">As a special offer, we are offering three months of unlimited access for just $3, a savings of more than $20.</p>
+            </div>
             </div>
         </div>
+        <br>
 </body>
 </html>
