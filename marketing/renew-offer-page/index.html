@@ -7,6 +7,27 @@
     <title>Special Offer Page</title>
 </head>
 <body>
-    
+    <div class="page-wrapper">
+        <br>
+            <div class="image-section">
+                <div class="image-wrapper">
+                    <img src="https://local.sltrib.com/graphics/trib_logo_subtext.png" alt="">
+                </div>
+            </div>
+                        <!--EVERYTHING HERE WILL TRIGGER PIANO POPUP APPEAR-->
+        <br>
+            <div 
+                class="subscribe-button action text-center bold" 
+                data-offer="${offerId}" 
+                data-template="${templateId}"
+                data-checkout="${checkoutId}"
+            >
+            <div class="button-wrapper">
+                <div class="my-button">
+                    <span>${buttonName}</span>
+                </div>
+            </div>
+            </div>
+        </div>
 </body>
 </html>
