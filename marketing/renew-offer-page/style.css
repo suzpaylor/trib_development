@@ -29,6 +29,11 @@
     max-width: 80%;
 }
 
+.resize {
+    height: 400px;
+    width: 200px;
+}
+
 .button-wrapper {
     border: 2px solid green;
     display: flex;
@@ -49,8 +54,6 @@
     font-size: 14px;
     padding: 6px 12px;
     margin-bottom: 0;
-    /* position: fixed;
-    top: 90%; */
     display: inline-block;
     text-decoration: none;
     text-align: center;
@@ -63,8 +66,8 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-image: none;
     border: 1px solid transparent;
+    transition: .5s;
 }
 .my-button:focus,
 .my-button:active:focus {
@@ -86,8 +89,12 @@
 /* MAKE THE PHOTO SMALLER */
 /*MAKE .hide-me-mobile appear on mobile */
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 430px) {
     .hide-me-mobile {
       display: flex;
+    }
+    .resize {
+        height: 600px;
+        width: 300px;
     }
   }
