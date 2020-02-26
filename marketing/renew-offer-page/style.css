@@ -1,0 +1,13 @@
+.page-wrapper {
+    max-width: 1200px;
+}
+
+.image-wrapper img {
+    max-width: 80%;
+}
+
+.my-button {
+    background-color: pink;
+    border: 2px solid black;
+    border-radius: 5px;
+}
