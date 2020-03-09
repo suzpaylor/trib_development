@@ -1,0 +1,271 @@
+/* MAIN CONTAINER FOR FEATURE */
+#outer_container {
+	width: 90%;
+	max-width: 1200px;
+	background: #FFFFFF;
+	margin: auto; /* the auto margins (in conjunction with a width) center the page */
+	text-align: left; /* this overrides the text-align: center on the body element. */
+}
+#mainContent {
+	padding: 10px 20px;
+	background: #FFFFFF;
+}
+
+/* CODE FOR NAV SECTION */
+.sticky {
+	position: fixed;
+	top: 60;
+	width: 100%;
+  }
+  
+  .sticky + .content {
+	padding-top: 60px;
+  }
+
+.nav-wrapper {
+	height: 40px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+	background-color: grey!important;
+	color: black!important;
+}
+
+a.nav-link.dropdown-toggle.highlighted.nav-wrapper {
+	margin: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+a.nav-item.nav-link.highlighted.nav-wrapper {
+	margin: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.highlighted:hover, .highlighted:active {
+	border-bottom: 2px solid #EF4056;
+	border-block-width: 20%;
+	border-radius: 0px;
+	text-decoration: none;
+}
+
+.highlighted {
+	padding: 0px;
+	margin: 20px;
+}
+
+/* MAIN MUG SHOTS */
+.mug-name {
+	pointer-events: none;
+    position: absolute;
+    z-index: 10;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+	text-shadow: 1px 1px black;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .img-thumbnail{
+        width: 300px;
+    }
+} 
+
+/* ACCORDIAN STUFF */
+
+.card-header {
+	padding: 5px;
+	background-color: transparent;
+	border: none;
+}
+
+.card,
+ .card:last-child, .card-header {
+  border: none;
+}
+
+
+button {
+	white-space: normal;
+	text-align: left;
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+button.btn {
+	margin: 10px;
+}
+
+.right {
+	color: rgba(211,30,37,.8);
+	display: block;
+	float: right;
+}
+
+.right:hover {
+	opacity: 0.6;
+}
+
+/* CSS FOR BACK TO TOP BUTTON   */
+
+.back-to-top {
+	color: #EF4056;
+	transition: opacity 0.5s ease-in-out;
+	transition: all .25s ease-in-out;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	cursor: pointer;
+	flex-direction: row;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.back-to-top:hover{
+    opacity: .5;
+}
+
+.back-to-top-text {
+	color: #EF4056;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 8px;
+}
+
+
+/* ISSUE SECTION */
+
+.card-body {
+	padding: 0;
+}
+
+.main-issue-wrapper {
+	/* border: 2px solid red; */
+}
+.issue-img-wrapper {
+	border: 2px solid pink;
+}
+
+.question-section-wrapper {
+	border: 2px solid lightskyblue;
+	text-align: center;
+}
+.the-question {
+	border: 2px solid blue;
+}
+.answer-wrapper {
+	border: 10px solid orange;
+	display: flex;
+	justify-content: center;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+
+.mugshot-wrapper {
+	border: 2px solid yellow;
+}
+.answer-text-wrapper {
+	border: 2px solid green;
+	padding-left: 10px;
+
+}
+.response-person {
+	border: 2px solid purple;
+	font-family: Helvetica, Arial, sans-serif;
+}
+.the-answer {
+	border: 2px solid grey;
+	margin-bottom: 0px;
+}
+
+p.the-answer {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.links {
+    color: #326891;
+    transition: color 0.5s ease-in-out!;
+}
+
+.links:hover {
+    color: #76818a;
+}
+
+/* .mugshot-wrapper {
+	width: 100px;
+} */
+
+.mugshot-wrapper {
+	width: 500px;
+}
+@media only screen and (max-width: 420px) {
+	.answer-wrapper {
+	  /* flex-direction: row!important; */
+	  background-color: pink;
+	  flex-wrap: wrap;
+	  align-self: center;
+	  padding-right: 0!important;
+	  padding-left: 0!important;
+	  margin-left: 0px;
+	}
+	.response-person {
+		text-align: center;
+	}
+	.answer-text-wrapper {
+		padding-left: 0;
+	}
+	img.img-thumbnail.smaller {
+		width: 100px;
+		height: 100px;
+	}
+	.m-2 {
+		width: 200px;
+		height: 200px;
+	}
+	.back-to-top-text {
+		display: none;
+	}
+
+  }
+
+
+.btn.btn-link {
+	padding: 0px;
+	margin: 0px;
+}
+
+  .btn-link:hover, .btn-link:focus {
+	  color:#333;
+	  text-decoration: none;
+  }
+
+
+  .redline {
+	border-bottom: 1px solid rgba(211,30,37,0.4); 
+	text-decoration: none;
+	font-family: Helvetica, Arial, sans-serif;
+	letter-spacing: .5px;
+	font-size: 18px;
+  }
+
+
+  /* THIS CODE TO MOVE BLOCK UP ON MOBILE */
+  @media only screen and (max-width: 420px) {
+	.something {
+		top: 1.8rem!important;
+	}
+	.hide-on-mobile {
+		display: none;
+	}
+
+	.smaller-mobile-text {
+		font-size: 12px;
+	}
+}
