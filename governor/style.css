@@ -12,33 +12,76 @@
 }
 
 /* CODE FOR NAV SECTION */
+.sticky {
+	position: fixed;
+	top: 60;
+	width: 100%;
+  }
+  
+  .sticky + .content {
+	padding-top: 60px;
+  }
+
 .nav-wrapper {
-	height: 68px;
+	height: 40px;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-	background-color: white!important;
+	background-color: grey!important;
 	color: black!important;
+}
+
+a.nav-link.dropdown-toggle.highlighted.nav-wrapper {
+	margin: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+a.nav-item.nav-link.highlighted.nav-wrapper {
+	margin: 5px;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 
 .highlighted:hover, .highlighted:active {
 	border-bottom: 2px solid #EF4056;
+	border-block-width: 20%;
 	border-radius: 0px;
+	text-decoration: none;
+}
+
+.highlighted {
+	padding: 0px;
+	margin: 20px;
 }
 
 /* MAIN MUG SHOTS */
+.mug-wrapper {
+	position: relative;
+	display: flex;
+}
+
+
+
 .mug-name {
 	pointer-events: none;
     position: absolute;
     z-index: 10;
     bottom: 20px;
-    right: 20px;
+    left: 25px;
     color: white;
 	text-shadow: 1px 1px black;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
+	font-size: 12;
 }
+ .mug-gop {
+	border: 5px solid #C43D49;
+ }
 
+ .mug-dem {
+	border: 5px solid #5186B4;
+ }
 
 @media only screen and (max-width: 480px) {
     .img-thumbnail{
@@ -46,63 +89,67 @@
     }
 } 
 
-/* .fa-chevron-down:before {
-	float: right;
-}
+/* ACCORDIAN STUFF */
 
-.right {
-	float: right;
-} */
-.right {
-	
-        color: red;
-        display: inline-block;
-        float: right;
-}
-
-.rotate {
-    -moz-transition: all .5s linear;
-    -webkit-transition: all .5s linear;
-    transition: all .5s linear;
-}
-.rotate.down {
-    -moz-transform:rotate(180deg);
-    -webkit-transform:rotate(180deg);
-    transform:rotate(180deg);
-}
-
-/* ACCORDIAN */
-
-/* .myaccordion {
-	box-shadow: 0 0 1px rgba(0,0,0,0.1);
-  }
-   
-  .myaccordion .card,
-  .myaccordion .card:last-child .card-header {
+.card-header {
+	padding: 5px;
+	background-color: transparent;
 	border: none;
-  }
-   
-  .myaccordion .card-header {
-	border-bottom-color: #EDEFF0;
-	background: transparent;
-  }
-   
-  .myaccordion .fa-stack {
-	font-size: 18px;
-  }
-   
-  .myaccordion .btn {
-	width: 100%;
+}
+
+.card,
+ .card:last-child, .card-header {
+  border: none;
+}
+
+
+button {
+	white-space: normal;
+	text-align: left;
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+button.btn {
+	margin: 10px;
+}
+
+.right {
+	color: rgba(211,30,37,.8);
+	display: block;
+	float: right;
+}
+
+.right:hover {
+	opacity: 0.6;
+}
+
+/* CSS FOR BACK TO TOP BUTTON   */
+
+.back-to-top {
+	color: #EF4056;
+	transition: opacity 0.5s ease-in-out;
+	transition: all .25s ease-in-out;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	cursor: pointer;
+	flex-direction: row;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.back-to-top:hover{
+    opacity: .5;
+}
+
+.back-to-top-text {
+	color: #EF4056;
+	font-size: 20px;
 	font-weight: bold;
-	color: #004987;
-	padding: 0;
-  }
-   
-  .myaccordion .btn-link:hover,
-  .myaccordion .btn-link:focus {
-	text-decoration: none;
-  } */
-   
+	margin-left: 8px;
+}
 
 
 /* ISSUE SECTION */
@@ -112,7 +159,7 @@
 }
 
 .main-issue-wrapper {
-	border: 2px solid red;
+	/* border: 2px solid red; */
 }
 .issue-img-wrapper {
 	border: 2px solid pink;
@@ -144,9 +191,15 @@
 }
 .response-person {
 	border: 2px solid purple;
+	font-family: Helvetica, Arial, sans-serif;
 }
 .the-answer {
 	border: 2px solid grey;
+	margin-bottom: 0px;
+}
+
+p.the-answer {
+	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
@@ -187,12 +240,76 @@
 		height: 100px;
 	}
 	.m-2 {
-		width: 200px;
-		height: 200px;
+		font-size: 10;
+	}
+	.back-to-top-text {
+		display: none;
 	}
 
   }
 
+
+.btn.btn-link {
+	padding: 0px;
+	margin: 0px;
+}
+
   .btn-link:hover, .btn-link:focus {
-	  color: purple!important;
+	  color:#333;
+	  text-decoration: none;
   }
+
+
+  .redline {
+	border-bottom: 1px solid rgba(211,30,37,0.4); 
+	text-decoration: none;
+	font-family: Helvetica, Arial, sans-serif;
+	letter-spacing: .5px;
+	font-size: 18px;
+  }
+
+.something {
+	margin-left:-120px;
+}
+
+
+
+@media only screen and (max-width: 1348px) {
+	.something {
+		margin-left: -40px;
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+	.something {
+		margin-left: -30px;
+	}
+
+}
+
+
+
+
+  /* THIS CODE TO MOVE BLOCK UP ON MOBILE */
+  @media only screen and (max-width: 420px) {
+	.something {
+		top: 1.8rem!important;
+		margin-left: -10px;
+	}
+	.hide-on-mobile {
+		display: none;
+	}
+
+	.smaller-mobile-text {
+		font-size: 12px;
+	}
+	.move-left {
+		margin-left: -15px;
+	}
+}
+
+section#main.container {
+    padding: 0px!important;
+}
+
