@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.js"
+  integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+  crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="gallerycard">
+        <div id="girlname">Akulina</div>
+       <div id="girlinfo">N/A</div>
+    </div>
+    
+    <div class="gallerycard">
+        <div id="girlname">Martina</div>
+       <div id="girlinfo">N/A</div>
+    </div>
+    
+    <div class="gallerycard">
+        <div id="girlname">Samantha</div>
+       <div id="girlinfo">N/A</div>
+    </div>
+    
+    <div class="gallerycard">
+        <div id="girlname">Karen</div>
+       <div id="girlinfo">N/A</div>
+    </div> 
+
+
+<script>
+var cards = $(".gallerycard")
+for(var i = 0; i < cards.length; i++){
+    var target = Math.floor(Math.random() * cards.length -1) + 1;
+    var target2 = Math.floor(Math.random() * cards.length -1) +1;
+    cards.eq(target).before(cards.eq(target2));
+}
+    </script>
+</body>
+</html>
