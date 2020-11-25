@@ -1,0 +1,113 @@
+@import "../../../resources/scss/global.scss";
+
+.grid-section {
+  .vertical-separator-a {
+    position: relative;
+    &:before {
+      content: "";
+      box-sizing: border-box;
+      height: calc(90% - 16px);
+      margin-top: 16px;
+      vertical-align: middle;
+      width: 1px;
+      background: #e6e6e6;
+      right: 0;
+      position: absolute;
+      @media screen and (max-width: $grid__bp-md * 1px) {
+        display: none !important;
+      }
+    }
+  }
+
+  .vertical-separator-b {
+    position: relative;
+    &:before {
+      content: "";
+      box-sizing: border-box;
+      height: calc(90% - 16px);
+      vertical-align: middle;
+      width: 1px;
+      background: #e6e6e6;
+      right: 0;
+      position: absolute;
+      @media screen and (max-width: $grid__bp-md * 1px) {
+        display: none !important;
+      }
+    }
+  }
+
+  .first-story {
+    margin-top: -8px;
+    margin-bottom: 16px;
+  }
+
+  .grid-ad-container-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .grid-ad-container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 16px;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: $grid__bp-lg * 1px) {
+    .top-story-left {
+      padding-right: 20px;
+    }
+
+    .middle-story {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: 16px;
+    }
+
+    .story-heading-fix {
+      margin-top: 0px;
+    }
+
+    .top-story-right {
+      margin-top: -16px;
+      padding-left: 20px;
+    }
+  }
+
+  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .move-down-tablet {
+      margin-top: 16px;
+    }
+  }
+
+  @media screen and (max-width: $grid__bp-md * 1px) {
+    .move-down-mobile {
+      margin-top: 16px;
+    }
+    .move-down-tablet {
+      margin-top: 16px;
+    }
+  }
+
+  @media screen and (min-width: $grid__bp-lg * 1px) {
+    .top-story-left {
+      padding-right: 20px;
+      .story-heading {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .grid-ad-container-1 {
+      padding-bottom: 16px;
+      margin-top: 16px;
+    }
+    .first-story {
+      margin-top: 0px;
+    }
+  }
+}

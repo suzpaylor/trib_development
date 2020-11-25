@@ -1,0 +1,43 @@
+@import "../../../resources/scss/global.scss";
+
+.homepage-layout-1 {
+  .ad {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0 16px 0;
+  }
+
+  .mobile-ads {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column-section {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  @media only screen and (max-width: 578px) {
+    .container {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .simple-title,
+    .story-heading,
+    .by-section,
+    .complex-title,
+    .morelinkssection,
+    .mission-container,
+    .ms-img-container,
+    .mobile-ads,
+    .heading,
+    .bagley-section {
+      padding: 0px 20px;
+    }
+    .section-title {
+      padding: 0px 20px;
+      margin-bottom: 5px;
+    }
+  }
+}
